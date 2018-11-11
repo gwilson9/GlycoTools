@@ -1,0 +1,17 @@
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\bin\Debug\GlycoFragmentFinder.exe.config
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\bin\Debug\GlycoFragmentFinder.exe
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\bin\Debug\GlycoFragmentFinder.pdb
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\bin\Debug\CSMSL.dll
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\bin\Debug\CSMSL.Thermo.dll
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\bin\Debug\LumenWorks.Framework.IO.dll
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\bin\Debug\CSMSL.pdb
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\bin\Debug\CSMSL.xml
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\bin\Debug\CSMSL.Thermo.pdb
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\bin\Debug\LumenWorks.Framework.IO.pdb
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\bin\Debug\LumenWorks.Framework.IO.xml
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\obj\Debug\GlycoFragmentFinder.csprojResolveAssemblyReference.cache
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\obj\Debug\GlycoFragmentFinder.exe
+c:\users\nick\documents\visual studio 2012\Projects\GlycoFragmentFinder\GlycoFragmentFinder\obj\Debug\GlycoFragmentFinder.pdb
+\\storage01\GENERAL\File_exchange\Gary\From Nick R\GlycoFragmentFinder\GlycoFragmentFinder\bin\Debug\GlycoFragmentFinder.exe.config
+\\storage01\GENERAL\File_exchange\Gary\From Nick R\GlycoFragmentFinder\GlycoFragmentFinder\obj\Debug\GlycoFragmentFinder.exe
+\\storage01\GENERAL\File_exchange\Gary\From Nick R\GlycoFragmentFinder\GlycoFragmentFinder\obj\Debug\GlycoFragmentFinder.pdb

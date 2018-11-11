@@ -1,0 +1,85 @@
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\ByonicDataParser.exe.config
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\ByonicDataParser.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\ByonicDataParser.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.Thermo.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\EntityFramework.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\System.Data.SQLite.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.Thermo.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\EntityFramework.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\bin\Debug\System.Data.SQLite.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.Form1.resources
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.Properties.Resources.resources
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.csproj.GenerateResource.Cache
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.csprojResolveAssemblyReference.cache
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\ByonicDataParser.exe.config
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\ByonicDataParser.exe
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\ByonicDataParser.pdb
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.dll
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.Thermo.dll
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\EntityFramework.dll
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\System.Data.SQLite.dll
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.pdb
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.Thermo.pdb
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\EntityFramework.xml
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\bin\Debug\System.Data.SQLite.xml
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.csprojResolveAssemblyReference.cache
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.Form1.resources
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.Properties.Resources.resources
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.csproj.GenerateResource.Cache
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.exe
+C:\Users\gwils\Desktop\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\ByonicDataParser.exe.config
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\ByonicDataParser.exe
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\ByonicDataParser.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\CSMSL.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\CSMSL.Thermo.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\EntityFramework.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\System.Data.SQLite.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\CSMSL.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\CSMSL.Thermo.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\EntityFramework.xml
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\bin\Debug\System.Data.SQLite.xml
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\obj\Debug\ByonicDataParser.csprojResolveAssemblyReference.cache
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\obj\Debug\ByonicDataParser.Form1.resources
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\obj\Debug\ByonicDataParser.Properties.Resources.resources
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\obj\Debug\ByonicDataParser.csproj.GenerateResource.Cache
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\obj\Debug\ByonicDataParser.exe
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ByonicDataParser\obj\Debug\ByonicDataParser.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\ByonicDataParser.exe.config
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\ByonicDataParser.exe
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\ByonicDataParser.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\CSMSL.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\CSMSL.Thermo.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\EntityFramework.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\System.Data.SQLite.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\CSMSL.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\CSMSL.Thermo.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\EntityFramework.xml
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\System.Data.SQLite.xml
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\obj\Debug\ByonicDataParser.csprojResolveAssemblyReference.cache
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\obj\Debug\ByonicDataParser.Form1.resources
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\obj\Debug\ByonicDataParser.Properties.Resources.resources
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\obj\Debug\ByonicDataParser.csproj.GenerateResource.Cache
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\obj\Debug\ByonicDataParser.exe
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\obj\Debug\ByonicDataParser.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\CSMSL.xml

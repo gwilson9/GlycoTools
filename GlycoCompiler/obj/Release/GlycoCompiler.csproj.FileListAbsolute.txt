@@ -1,0 +1,16 @@
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\bin\Release\GlycoCompiler.exe.config
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\bin\Release\GlycoCompiler.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\bin\Release\GlycoCompiler.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\bin\Release\CSMSL.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\bin\Release\LumenWorks.Framework.IO.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\bin\Release\MathNet.Numerics.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\bin\Release\CSMSL.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\bin\Release\CSMSL.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\bin\Release\LumenWorks.Framework.IO.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\bin\Release\MathNet.Numerics.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\obj\Release\GlycoCompiler.csprojResolveAssemblyReference.cache
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\obj\Release\GlycoCompiler.Form1.resources
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\obj\Release\GlycoCompiler.Properties.Resources.resources
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\obj\Release\GlycoCompiler.csproj.GenerateResource.Cache
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\obj\Release\GlycoCompiler.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\obj\Release\GlycoCompiler.pdb

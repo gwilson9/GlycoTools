@@ -1,0 +1,129 @@
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\GlycoTools.exe.config
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\obj\Debug\GlycoTools.csprojResolveAssemblyReference.cache
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\obj\Debug\GlycoTools.GlycoToolsForm.resources
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\obj\Debug\GlycoTools.Properties.Resources.resources
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\obj\Debug\GlycoTools.csproj.GenerateResource.Cache
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\GlycoTools.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\GlycoTools.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\obj\Debug\GlycoTools.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\obj\Debug\GlycoTools.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\ScanAssigner.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\ScanAssigner.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\CSMSL.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\CSMSL.Thermo.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\LumenWorks.Framework.IO.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\CSMSL.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\CSMSL.Thermo.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\LumenWorks.Framework.IO.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\GlycoCompiler.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\MathNet.Numerics.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\GlycoCompiler.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\MathNet.Numerics.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\EntityFramework.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\System.Data.SQLite.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\EntityFramework.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\System.Data.SQLite.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\ByonicDataParser.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\GlycoTools\bin\Debug\ByonicDataParser.pdb
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\GlycoTools.exe.config
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\obj\Debug\GlycoTools.exe
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\obj\Debug\GlycoTools.pdb
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\GlycoTools.exe
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\GlycoTools.pdb
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\ByonicDataParser.exe
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\CSMSL.dll
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\CSMSL.Thermo.dll
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\EntityFramework.dll
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\GlycoCompiler.exe
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\LumenWorks.Framework.IO.dll
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\ScanAssigner.exe
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\System.Data.SQLite.dll
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\MathNet.Numerics.dll
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\ByonicDataParser.pdb
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\CSMSL.pdb
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\CSMSL.Thermo.pdb
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\GlycoCompiler.pdb
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\ScanAssigner.pdb
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\EntityFramework.xml
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\LumenWorks.Framework.IO.xml
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\System.Data.SQLite.xml
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\bin\Debug\MathNet.Numerics.xml
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\obj\Debug\GlycoTools.csprojResolveAssemblyReference.cache
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\obj\Debug\GlycoTools.GlycoToolsForm.resources
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\obj\Debug\GlycoTools.Properties.Resources.resources
+C:\Users\gwils\Desktop\GlycoTools\GlycoTools\obj\Debug\GlycoTools.csproj.GenerateResource.Cache
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\GlycoTools.exe.config
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\obj\Debug\GlycoTools.exe
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\obj\Debug\GlycoTools.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\GlycoTools.exe
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\GlycoTools.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\ByonicDataParser.exe
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\CSMSL.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\CSMSL.Thermo.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\EntityFramework.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\GlycoCompiler.exe
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\LumenWorks.Framework.IO.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\ScanAssigner.exe
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\System.Data.SQLite.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\MathNet.Numerics.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\ByonicDataParser.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\CSMSL.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\CSMSL.Thermo.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\GlycoCompiler.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\ScanAssigner.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\EntityFramework.xml
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\LumenWorks.Framework.IO.xml
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\System.Data.SQLite.xml
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\MathNet.Numerics.xml
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\obj\Debug\GlycoTools.csprojResolveAssemblyReference.cache
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\obj\Debug\GlycoTools.GlycoToolsForm.resources
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\obj\Debug\GlycoTools.Properties.Resources.resources
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\GlycoTools\obj\Debug\GlycoTools.csproj.GenerateResource.Cache
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\DeglycoDataBrowser.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_ForLFQ\GlycoTools\bin\Debug\DeglycoDataBrowser.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\GlycoTools.exe.config
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\obj\Debug\GlycoTools.exe
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\obj\Debug\GlycoTools.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\GlycoTools.exe
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\GlycoTools.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\ByonicDataParser.exe
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\CSMSL.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\CSMSL.Thermo.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\DeglycoDataBrowser.exe
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\EntityFramework.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\GlycoCompiler.exe
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\LumenWorks.Framework.IO.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\ScanAssigner.exe
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\System.Data.SQLite.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\MathNet.Numerics.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\ByonicDataParser.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\CSMSL.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\CSMSL.Thermo.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\DeglycoDataBrowser.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\GlycoCompiler.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\ScanAssigner.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\EntityFramework.xml
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\LumenWorks.Framework.IO.xml
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\System.Data.SQLite.xml
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\MathNet.Numerics.xml
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\obj\Debug\GlycoTools.csprojResolveAssemblyReference.cache
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\obj\Debug\GlycoTools.GlycoToolsForm.resources
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\obj\Debug\GlycoTools.Properties.Resources.resources
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\obj\Debug\GlycoTools.csproj.GenerateResource.Cache
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\CSMSL.xml

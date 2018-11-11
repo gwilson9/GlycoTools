@@ -1,0 +1,14 @@
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\bin\Release\DeglycoDataBrowser.exe.config
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\bin\Release\DeglycoDataBrowser.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\bin\Release\DeglycoDataBrowser.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\bin\Release\CSMSL.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\bin\Release\LumenWorks.Framework.IO.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\bin\Release\CSMSL.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\bin\Release\CSMSL.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\bin\Release\LumenWorks.Framework.IO.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\obj\Release\DeglycoDataBrowser.csprojResolveAssemblyReference.cache
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\obj\Release\DeglycoDataBrowser.Form1.resources
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\obj\Release\DeglycoDataBrowser.Properties.Resources.resources
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\obj\Release\DeglycoDataBrowser.csproj.GenerateResource.Cache
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\obj\Release\DeglycoDataBrowser.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\obj\Release\DeglycoDataBrowser.pdb

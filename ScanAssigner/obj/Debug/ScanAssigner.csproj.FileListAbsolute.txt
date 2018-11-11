@@ -1,0 +1,63 @@
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\bin\Debug\ScanAssigner.exe.config
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\bin\Debug\ScanAssigner.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\bin\Debug\ScanAssigner.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.csprojResolveAssemblyReference.cache
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.Form1.resources
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.Properties.Resources.resources
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.csproj.GenerateResource.Cache
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.exe
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\bin\Debug\CSMSL.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\bin\Debug\CSMSL.Thermo.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\bin\Debug\LumenWorks.Framework.IO.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\bin\Debug\CSMSL.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\bin\Debug\CSMSL.Thermo.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools\ScanAssigner\bin\Debug\LumenWorks.Framework.IO.xml
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\bin\Debug\ScanAssigner.exe.config
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\bin\Debug\ScanAssigner.exe
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\bin\Debug\ScanAssigner.pdb
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\bin\Debug\CSMSL.dll
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\bin\Debug\CSMSL.Thermo.dll
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\bin\Debug\LumenWorks.Framework.IO.dll
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\bin\Debug\CSMSL.pdb
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\bin\Debug\CSMSL.Thermo.pdb
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\bin\Debug\LumenWorks.Framework.IO.xml
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.csprojResolveAssemblyReference.cache
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.Form1.resources
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.Properties.Resources.resources
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.csproj.GenerateResource.Cache
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.exe
+C:\Users\gwils\Desktop\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\bin\Debug\ScanAssigner.exe.config
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\bin\Debug\ScanAssigner.exe
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\bin\Debug\ScanAssigner.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\bin\Debug\CSMSL.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\bin\Debug\CSMSL.Thermo.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\bin\Debug\LumenWorks.Framework.IO.dll
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\bin\Debug\CSMSL.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\bin\Debug\CSMSL.Thermo.pdb
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\bin\Debug\LumenWorks.Framework.IO.xml
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\obj\Debug\ScanAssigner.csprojResolveAssemblyReference.cache
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\obj\Debug\ScanAssigner.Form1.resources
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\obj\Debug\ScanAssigner.Properties.Resources.resources
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\obj\Debug\ScanAssigner.csproj.GenerateResource.Cache
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\obj\Debug\ScanAssigner.exe
+D:\Documents\Documents\visual studio 2015\projects\GlycoTools_ForLFQ\ScanAssigner\obj\Debug\ScanAssigner.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\ScanAssigner.exe.config
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\ScanAssigner.exe
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\ScanAssigner.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\CSMSL.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\CSMSL.Thermo.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\LumenWorks.Framework.IO.dll
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\CSMSL.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\CSMSL.Thermo.pdb
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\LumenWorks.Framework.IO.xml
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\obj\Debug\ScanAssigner.csprojResolveAssemblyReference.cache
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\obj\Debug\ScanAssigner.Form1.resources
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\obj\Debug\ScanAssigner.Properties.Resources.resources
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\obj\Debug\ScanAssigner.csproj.GenerateResource.Cache
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\obj\Debug\ScanAssigner.exe
+D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\obj\Debug\ScanAssigner.pdb
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\MathNet.Numerics.dll
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\MathNet.Numerics.xml
+D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\CSMSL.xml
