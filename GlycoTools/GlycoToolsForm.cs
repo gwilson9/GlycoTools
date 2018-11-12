@@ -45,5 +45,48 @@ namespace GlycoTools
             var deglycoDBGenerator = new DeglycoDataBrowser.Form1 { MdiParent = this };
             deglycoDBGenerator.Show();
         }
+
+        private void GlycoToolsForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var deglycoDBGenerator = new DeglycoDataBrowser.Form1 { MdiParent = this };
+            deglycoDBGenerator.Show();
+            panel1.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var byonicResultsParser = new ByonicDataParser.Form1 { MdiParent = this };
+            byonicResultsParser.Show();
+            panel1.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var scanAssigner = new ScanAssigner.Form1 { MdiParent = this };
+            scanAssigner.Show();
+            panel1.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var glycoCompiler = new GlycoCompiler.Form1 { MdiParent = this };
+            glycoCompiler.Show();
+            panel1.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            panel1.Show();
+        }
     }
 }
