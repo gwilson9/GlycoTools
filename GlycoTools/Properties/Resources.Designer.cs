@@ -169,5 +169,85 @@ namespace GlycoTools.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20181112_GlycoTools_Images_Artboard_1_copy_5 {
+            get {
+                object obj = ResourceManager.GetObject("20181112_GlycoTools_Images_Artboard 1 copy 5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20181112_GlycoTools_Images_Artboard_1_copy_51 {
+            get {
+                object obj = ResourceManager.GetObject("20181112_GlycoTools_Images_Artboard 1 copy 51", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20181112_GlycoTools_Images_Artboard_1_copy_6 {
+            get {
+                object obj = ResourceManager.GetObject("20181112_GlycoTools_Images_Artboard 1 copy 6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20181112_GlycoTools_Images_Artboard_1_copy_61 {
+            get {
+                object obj = ResourceManager.GetObject("20181112_GlycoTools_Images_Artboard 1 copy 61", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20181112_GlycoTools_Images_Artboard_1_copy_62 {
+            get {
+                object obj = ResourceManager.GetObject("20181112_GlycoTools_Images_Artboard 1 copy 62", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20181112_GlycoTools_Images_Artboard_1_copy_7 {
+            get {
+                object obj = ResourceManager.GetObject("20181112_GlycoTools_Images_Artboard 1 copy 7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20181112_GlycoTools_Images_Artboard_1_copy1 {
+            get {
+                object obj = ResourceManager.GetObject("20181112_GlycoTools_Images_Artboard 1 copy1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Coon_Graphic_02 {
+            get {
+                object obj = ResourceManager.GetObject("Coon Graphic-02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

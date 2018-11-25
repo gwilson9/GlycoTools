@@ -61,3 +61,21 @@ D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenera
 D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\MathNet.Numerics.dll
 D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\MathNet.Numerics.xml
 D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ScanAssigner\bin\Debug\CSMSL.xml
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\bin\Debug\ScanAssigner.exe.config
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\bin\Debug\ScanAssigner.exe
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\bin\Debug\ScanAssigner.pdb
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\bin\Debug\CSMSL.dll
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\bin\Debug\CSMSL.Thermo.dll
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\bin\Debug\LumenWorks.Framework.IO.dll
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\bin\Debug\MathNet.Numerics.dll
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\bin\Debug\CSMSL.pdb
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\bin\Debug\CSMSL.xml
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\bin\Debug\CSMSL.Thermo.pdb
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\bin\Debug\LumenWorks.Framework.IO.xml
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\bin\Debug\MathNet.Numerics.xml
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.csprojResolveAssemblyReference.cache
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.Form1.resources
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.Properties.Resources.resources
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.csproj.GenerateResource.Cache
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.exe
+C:\Users\gwilson\Desktop\Repo\GlycoTools\ScanAssigner\obj\Debug\ScanAssigner.pdb

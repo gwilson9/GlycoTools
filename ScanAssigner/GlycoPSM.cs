@@ -92,5 +92,17 @@ namespace ScanAssigner
             this.evidenceType = evidenceType;
             this.evidenceNumber = evidenceNumber;
         }
+
+        public string glycansToString()
+        {
+            string returnString = "";
+            foreach(string glycan in glycans)
+            {
+                returnString += glycan + ';';
+            }
+
+            return returnString.Trim(';');
+        }
+
     }
 }

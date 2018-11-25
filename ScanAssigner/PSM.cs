@@ -107,6 +107,7 @@ namespace ScanAssigner
             this.modsPassedCheck = modsPassedCheck;
             this.masterScan = masterScan;
             this.byonicIntensity = byonicIntensity;
+            this.positionPassedCheck = positionPassedCheck;
             //this.spectrum = spectrum;
         }
     }

@@ -69,9 +69,14 @@ namespace ScanAssigner
             StreamWriter outputSummary = new StreamWriter(@outputFolderPath + "\\" + file + "_summary.csv");
             StreamWriter outputList = new StreamWriter(@outputFolderPath + "\\" + file + "_list.txt");
 
-            outputList.Write("PID\tProt.Rank\tSequence\tPeptideParseFriendly\tPeptide\tPos.\tMods(variable)\tGlycans\tPEP2D\tPEP1D\t|Log Prob|\tScore\tDeltaScore\tDelta Mod.Score\tCharge\tObs.m/z\t");
-            outputList.Write("Precursor Theoretical m/z (Th)\tppmerr.\tObs.MH\tCalc.MH\tCleavage\tGlycansPos.\tProteinName\tProt.Id\tScanTime\tSpectrum Number\tMods(fixed)\tFDR2D\tFDR1D\t");
-            outputList.WriteLine("FDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D\tisGlycoPeptide\tmodsPassedCheck\tpositionPassedCheck\tfragmentation\tMasterScan\tPeak126\tPeak138\tPeak144\tPeak168\tPeak186\tPeak204\tPeak274\tPeak292\tPeak366\tGlcNAc/GalNAcratio");
+
+            //Write Headers
+            outputList.WriteLine("Prot.Rank\tSequence\tPeptideParseFriendly\tPeptide\tPos.\tMods(variable)\tGlycans\t"+
+                                 "PEP2D\tPEP1D\t|Log Prob|\tScore\tDeltaScore\tDelta Mod.Score\tCharge\tObs.m/z\t"+
+                                 "Precursor Theoretical m/z (Th)\tppmerr.\tObs.MH\tCalc.MH\tCleavage\tGlycansPos.\tProteinName" +
+                                 "\tProt.Id\tScanTime\tSpectrum Number\tMods(fixed)\tFDR2D\tFDR1D\t"+
+                                 "FDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D\tisGlycoPeptide\tmodsPassedCheck" +
+                                 "\tpositionPassedCheck\tfragmentation\tMasterScan");
 
             List<int> HCDscans = new List<int>();
             List<int> ETDscans = new List<int>();
@@ -123,14 +128,14 @@ namespace ScanAssigner
                     {
                         List<int> glycanPositionsList = new List<int>();
 
-                        string PID = csv["PID"];
+                        string PID = "NA";//csv["PID"];
                         string protRank = csv["ProtRank"];
                         string byonicSequence = csv["Sequence"];
                         string peptidesToBeParsed = csv["PeptideParseFriendly"];
 
                         // NEW
                         string aminoAcidSequence = peptidesToBeParsed.Split(',')[0];
-                        string byonicIntensity = csv["Intensity"];
+                        string byonicIntensity = "NA"; //csv["Intensity"];
 
                         int peptideStartPosition = int.Parse(csv["Pos."]);
                         string modsToBeParsed = csv["Mods(variable)"];
@@ -163,9 +168,9 @@ namespace ScanAssigner
                         double qvalue2D = double.Parse(csv["q-value2D"]);
                         double qvalue1D = double.Parse(csv["q-value1D"]);
 
-
+                        // Flags to be used
                         bool isGlycoPeptide = false;
-                        bool modsPassedCheck = true;
+                        bool modsPassedCheck = false;
                         bool positionsPassedCheck = false;
 
                         if (modsToBeParsed.Contains("Glycan"))
@@ -245,9 +250,11 @@ namespace ScanAssigner
 
                         int masterScan = rawFile.GetParentSpectrumNumber(scanNumber);
 
-                        PSM psm = new PSM(peptide, PID, protRank, peptidesToBeParsed, peptideStartPosition, modsToBeParsed, glycansToBeParsed, PEP2D, PEP1D, logProb, score, deltaScore, deltaModScore, charge, mzObs, mzCalc, ppmError,
-                            obsMH, calcMH, cleavage, glycanPositions, proteinName, protID, scanTime, scanNumber, modsFixed, FDR2D, FDR1D, FDR2Dunique, FDR1Dunique, qvalue2D, qvalue1D, isGlycoPeptide, fragmentation, byonicSequence, 
-                            modsPassedCheck, masterScan, positionsPassedCheck, byonicIntensity);//, spectrum);
+                        PSM psm = new PSM(peptide, PID, protRank, peptidesToBeParsed, peptideStartPosition, modsToBeParsed, glycansToBeParsed, 
+                                          PEP2D, PEP1D, logProb, score, deltaScore, deltaModScore, charge, mzObs, mzCalc, ppmError,
+                                          obsMH, calcMH, cleavage, glycanPositions, proteinName, protID, scanTime, scanNumber, modsFixed, FDR2D, FDR1D, 
+                                          FDR2Dunique, FDR1Dunique, qvalue2D, qvalue1D, isGlycoPeptide, fragmentation, byonicSequence, 
+                                          modsPassedCheck, masterScan, positionsPassedCheck, byonicIntensity);//, spectrum);
 
 
                         if (peptide.Length > 4 && FDR2D <= 0.01)
@@ -352,27 +359,13 @@ namespace ScanAssigner
                         outputList.WriteLine("FDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D\tisGlycoPeptide\tmodsPassedCheck\tpositionPassedCheck\tfragmentation\tPeak126\tPeak138\tPeak144\tPeak168\tPeak186\tPeak204\tPeak274\tPeak292\tPeak366");
                         */
 
-
-                        double intensity126 = 0; // CheckPeak(psm.Peak126);
-                        double intensity138 = 0; //CheckPeak(psm.Peak138);
-                        double intensity144 = 0; //CheckPeak(psm.Peak144);
-                        double intensity168 = 0; //CheckPeak(psm.Peak168);
-                        double intensity186 = 0; //CheckPeak(psm.Peak186);
-                        double intensity204 = 0; // CheckPeak(psm.Peak204);
-                        double intensity274 = 0; // CheckPeak(psm.Peak274);
-                        double intensity292 = 0; // CheckPeak(psm.Peak292);
-                        double intensity366 = 0; // CheckPeak(psm.Peak366);
-
-                        if ((intensity126 + intensity144) > 0)
-                        {
-                            GlcNAcToGalNAcratio = (intensity138 + intensity168) / (intensity126 + intensity144);
-                        }                                           
-                    
-                        outputList.Write(PID + "\t" + protRank + "\t" + byonicSequence + "\t" + peptidesToBeParsed + "\t" + aminoAcidSequence + "\t" + peptideStartPosition + "\t" + modsToBeParsed + "\t" + glycansToBeParsed + "\t" + PEP2D + "\t" + PEP1D + "\t");
-                        outputList.Write(logProb + "\t" + score + "\t" + deltaScore + "\t" + deltaModScore + "\t" + charge + "\t" + mzObs + "\t" + mzCalc + "\t" + ppmError + "\t" + obsMH + "\t" + calcMH + "\t" + cleavage + "\t");
-                        outputList.Write(glycanPositions + "\t" + proteinName + "\t" + protID + "\t" + scanTime + "\t" + scanNumber + "\t" + modsFixed + "\t" + FDR2D + "\t" + FDR1D + "\t" + FDR2Dunique + "\t" + FDR1Dunique + "\t");
-                        outputList.Write(qvalue2D + "\t" + qvalue1D + "\t" + isGlycoPeptide + "\t" + modsPassedCheck + "\t" + positionsPassedCheck + "\t" + fragmentation + "\t" + masterScan + "\t" + intensity126 + "\t" + intensity138 + "\t");
-                        outputList.WriteLine(intensity144 + "\t" + intensity168 + "\t" + intensity186 + "\t" + intensity204 + "\t" + intensity274 + "\t" + intensity292 + "\t" + intensity366 + "\t" + GlcNAcToGalNAcratio);
+                        outputList.WriteLine(protRank + "\t" + byonicSequence + "\t" + peptidesToBeParsed + "\t" + aminoAcidSequence + "\t" +
+                                             peptideStartPosition + "\t" + modsToBeParsed + "\t" + glycansToBeParsed + "\t" + PEP2D + "\t" + PEP1D + "\t" +
+                                             logProb + "\t" + score + "\t" + deltaScore + "\t" + deltaModScore + "\t" + charge + "\t" + mzObs + "\t" + mzCalc +
+                                             "\t" + ppmError + "\t" + obsMH + "\t" + calcMH + "\t" + cleavage + "\t" + glycanPositions + "\t" + proteinName + "\t" +
+                                             protID + "\t" + scanTime + "\t" + scanNumber + "\t" + modsFixed + "\t" + FDR2D + "\t" + FDR1D + "\t" + FDR2Dunique +
+                                             "\t" + FDR1Dunique + "\t" + qvalue2D + "\t" + qvalue1D + "\t" + isGlycoPeptide + "\t" + modsPassedCheck + "\t" +
+                                             positionsPassedCheck + "\t" + fragmentation + "\t" + masterScan);
 
                     } catch(Exception e)
                     {
@@ -396,19 +389,19 @@ namespace ScanAssigner
             // Start LFQ Writer
             StreamWriter quantWriter = new StreamWriter(@outputFolderPath + "\\" + file + "_list_Quant.txt");
 
-            quantWriter.WriteLine("PID\tProt.Rank\tSequence\tPeptideParseFriendly\tPeptide\tPos.\tMods(variable)\tGlycans\tPEP2D\tPEP1D\t|Log Prob|\tScore\tDeltaScore\tDelta Mod.Score\tCharge\tObs.m/z\t" +
+            quantWriter.WriteLine("Prot.Rank\tSequence\tPeptideParseFriendly\tPeptide\tPos.\tMods(variable)\tGlycans\tPEP2D\tPEP1D\t|Log Prob|\tScore\tDeltaScore\tDelta Mod.Score\tCharge\tObs.m/z\t" +
             "Precursor Theoretical m/z (Th)\tppmerr.\tObs.MH\tCalc.MH\tCleavage\tGlycansPos.\tProteinName\tProt.Id\tScanTime\tSpectrum Number\tMods(fixed)\tFDR2D\tFDR1D\t" +
-            "FDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D\tisGlycoPeptide\tmodsPassedCheck\tpositionPassedCheck\tfragmentation\tMasterScan\tLFQ Intensity\tByonicIntensity");
+            "FDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D\tisGlycoPeptide\tmodsPassedCheck\tpositionPassedCheck\tfragmentation\tMasterScan\tLFQ Intensity");
 
             foreach (PSM psmQ in allPsmsQuant)
             {
-                quantWriter.WriteLine(psmQ.PID + "\t" + psmQ.protRank + "\t" + psmQ.byonicSequence + "\t" + psmQ.peptidesToBeParsed + "\t" + psmQ.peptide.Sequence + "\t" +
+                quantWriter.WriteLine(psmQ.protRank + "\t" + psmQ.byonicSequence + "\t" + psmQ.peptidesToBeParsed + "\t" + psmQ.peptide.Sequence + "\t" +
                     psmQ.peptideStartPosition + "\t" + psmQ.modsToBeParsed + "\t" + psmQ.glycansToBeParsed + "\t" + psmQ.PEP2D + "\t" + psmQ.PEP1D + "\t" + psmQ.logProb +
                     "\t" + psmQ.score + "\t" + psmQ.deltaScore + "\t" + psmQ.deltaModScore + "\t" + psmQ.charge + "\t" + psmQ.mzObs + "\t" + psmQ.mzCalc + "\t" + psmQ.ppmError +
                     "\t" + psmQ.obsMH + "\t" + psmQ.calcMH + "\t" + psmQ.cleavage + "\t" + psmQ.glycanPositions + "\t" + psmQ.proteinName + "\t" + psmQ.protID + "\t" + psmQ.scanTime +
                     "\t" + psmQ.scanNumber + "\t" + psmQ.modsFixed + "\t" + psmQ.FDR2D + "\t" + psmQ.FDR1D + "\t" + psmQ.FDR2Dunique + "\t" + psmQ.FDR1Dunique + "\t" +
                     psmQ.qvalue2D + "\t" + psmQ.qvalue1D + "\t" + psmQ.isGlycoPeptide + "\t" + psmQ.modsPassedCheck + "\t" + psmQ.positionPassedCheck + "\t" + psmQ.fragmentation
-                    + "\t" + psmQ.masterScan + "\t" + psmQ.intensity + "\t" + psmQ.byonicIntensity);
+                    + "\t" + psmQ.masterScan + "\t" + psmQ.intensity);
             }
 
             quantWriter.Close();

@@ -56,7 +56,7 @@ namespace ScanAssigner
             }
 
             // Question: how do we sync the list of PSMs with the intensity of the LFPeptide
-            // They should be in same order
+            // They will be in same order
 
             List<LFPeptide> pepsWithSmooth = new List<LFPeptide>();
 

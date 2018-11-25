@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace ScanAssigner
 {
-    class FragmentMatch
+    class FragmentMatch : IEquatable<FragmentMatch>
     {
         public string fragmentName { get; set; }
         public string fragmentType { get; set; }
@@ -22,6 +22,35 @@ namespace ScanAssigner
             this.fragmentCharge = fragmentCharge;
             this.fragmentMZ = fragmentMZ;
             this.fragmentSignal = fragmentSignal;
+        } 
+
+        public override bool Equals(Object obj)
+        {
+            var other = obj as FragmentMatch;
+            if (other == null)
+                return false;
+
+            return Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.fragmentName.GetHashCode() +
+                   this.fragmentType.GetHashCode() +
+                   this.fragmentNumber.GetHashCode() +
+                   this.fragmentCharge.GetHashCode() +
+                   this.fragmentMZ.GetHashCode() +
+                   this.fragmentSignal.GetHashCode();
+        }
+
+        public bool Equals(FragmentMatch other)
+        {
+            return (this.fragmentName.Equals(other.fragmentName) &&
+                    this.fragmentType.Equals(other.fragmentType) &&
+                    this.fragmentNumber.Equals(other.fragmentNumber) &&
+                    this.fragmentCharge.Equals(other.fragmentCharge) &&
+                    this.fragmentMZ.Equals(other.fragmentMZ) &&
+                    this.fragmentSignal.Equals(other.fragmentSignal));
         }
     }
 }

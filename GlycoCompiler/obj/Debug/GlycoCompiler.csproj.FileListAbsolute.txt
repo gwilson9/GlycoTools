@@ -59,3 +59,19 @@ D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenera
 D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\obj\Debug\GlycoCompiler.exe
 D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\obj\Debug\GlycoCompiler.pdb
 D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoCompiler\bin\Debug\CSMSL.xml
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\bin\Debug\GlycoCompiler.exe.config
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\bin\Debug\GlycoCompiler.exe
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\bin\Debug\GlycoCompiler.pdb
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\bin\Debug\CSMSL.dll
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\bin\Debug\LumenWorks.Framework.IO.dll
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\bin\Debug\MathNet.Numerics.dll
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\bin\Debug\CSMSL.pdb
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\bin\Debug\CSMSL.xml
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\bin\Debug\LumenWorks.Framework.IO.xml
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\bin\Debug\MathNet.Numerics.xml
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\obj\Debug\GlycoCompiler.csprojResolveAssemblyReference.cache
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\obj\Debug\GlycoCompiler.Form1.resources
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\obj\Debug\GlycoCompiler.Properties.Resources.resources
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\obj\Debug\GlycoCompiler.csproj.GenerateResource.Cache
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\obj\Debug\GlycoCompiler.exe
+C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoCompiler\obj\Debug\GlycoCompiler.pdb

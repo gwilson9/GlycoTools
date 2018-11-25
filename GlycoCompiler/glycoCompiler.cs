@@ -143,7 +143,7 @@ namespace GlycoCompiler
                     outputList.WriteLine("FDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D\tisGlycoPeptide\tmodsPassedCheck\tpositionPassedCheck\tfragmentation\tMasterScan\tPeak126\tPeak138\tPeak144\tPeak168\tPeak186\tPeak204\tPeak274\tPeak292\tPeak366\tGlcNAc/GalNAcratio");
                     */
 
-                    string PID = csv["PID"];
+                    string PID = "NA";   //csv["PID"];
                     string protRank = csv["Prot.Rank"];
                     string sequence = csv["Sequence"];
                     string peptidesToBeParsed = csv["PeptideParseFriendly"];
@@ -178,7 +178,7 @@ namespace GlycoCompiler
                     bool isGlycoPeptide = bool.Parse(csv["isGlycoPeptide"]);
                     string fragmentation = csv["fragmentation"];
                     int masterScan = int.Parse(csv["MasterScan"]);
-                    string byonicIntensity = csv["ByonicIntensity"];
+                    string byonicIntensity = "NA"; //csv["ByonicIntensity"];
 
                     double peak126 = 0;
                     double peak138 = 0;
@@ -310,7 +310,7 @@ namespace GlycoCompiler
                                 Console.WriteLine(uniprotEvidenceNumber);
                                 */
 
-                                if (modName.Contains("NGlycan"))
+                                if (modName.Contains("NGlycan") || modName.Contains("OGlycan"))
                                 {
                                     glycanMasses.Add(modMass);
 

@@ -47,15 +47,14 @@ namespace ByonicDataParser
                     //Values to get
 
                     //string PID = csv["PID"];                                                            //Ignored for now
-                    string protRank = reader["ProteinRank"].ToString();                                          
-
+                    string protRank = reader["ProteinRank"].ToString();
                     string pqmsID = reader["pqmsID"].ToString();
                     string sequence = reader["DebugText"].ToString();
                     string peptidesToBeParsed = reader["PeptideParse"].ToString();
                     int peptideStartPosition = int.Parse(reader["ProteinStartPosition"].ToString());   
                     double PEP2D = double.Parse(reader["PosteriorErrorProbability2"].ToString());
                     double PEP1D = double.Parse(reader["PosteriorErrorProbability1"].ToString());
-                    //double logProb = double.Parse(csv["|Log Prob|"]);                                 //Ignored for now
+                    double logProb = Math.Abs(Math.Log10(PEP1D));                                 //Ignored for now
                     double score = double.Parse(reader["Score"].ToString());
                     double deltaScore = double.Parse(reader["DeltaScoreSeq"].ToString());
                     double deltaModScore = double.Parse(reader["DeltaScoreSeqMod"].ToString());
@@ -82,8 +81,10 @@ namespace ByonicDataParser
                     double qvalue1D = double.Parse(reader["PosteriorErrorProbability1_sum"].ToString());
                     double intensity = double.Parse(reader["intensity"].ToString());
 
-                    PSM newPSM = new PSM(pqmsID, sequence, peptidesToBeParsed, peptideStartPosition, PEP2D, PEP1D, score, deltaScore, deltaModScore, charge, mzObs, mzCalc,
-                        obsMH, calcMH, cleavage, proteinName, protID, scanNumber, FDR2D, FDR1D, FDR2Dunique, FDR1Dunique, qvalue2D, qvalue1D, intensity, scanTime, protRank);
+                    PSM newPSM = new PSM(pqmsID, sequence, peptidesToBeParsed, peptideStartPosition, PEP2D, PEP1D, score, 
+                        deltaScore, deltaModScore, charge, mzObs, mzCalc, obsMH, calcMH, cleavage, proteinName, protID, 
+                        scanNumber, FDR2D, FDR1D, FDR2Dunique, FDR1Dunique, qvalue2D, qvalue1D, intensity, scanTime, protRank,
+                        logProb);
 
                     psms.Add(newPSM);
 
@@ -108,11 +109,23 @@ namespace ByonicDataParser
                 
                     while(reader.Read())
                     {
-                        if (reader["Classification"].ToString().Equals("ngly"))
+                        if (reader["Classification"].ToString().Equals("ngly") || reader["Classification"].ToString().Equals("ogly"))
                         {
                             glycans += reader["Composition"] + ";";
                             glycanPos += reader["ModificationsPeptidePosition"] + ";";
-                            varMods += "N" + reader["ModificationsPeptidePosition"] + "(" + reader["AllowedSites"] + " / " + reader["MonoMassShiftTotal"] + ");";
+
+                            if (reader["Classification"].ToString().Equals("ngly"))
+                            {
+                                varMods += "N" + reader["ModificationsPeptidePosition"] + "(" + reader["AllowedSites"] + " / " 
+                                            + reader["MonoMassShiftTotal"] + ");";
+                            }
+                            else
+                            {
+                                var position = Int32.Parse(reader["ModificationsPeptidePosition"].ToString());                                
+                                varMods += psm.peptidesToBeParsed[position - 1] + reader["ModificationsPeptidePosition"].ToString() +
+                                            "(" + reader["AllowedSites"] + " / " + reader["MonoMassShiftTotal"] + ");";
+                            }
+                                
                         }
                         else
                         {
@@ -164,9 +177,9 @@ namespace ByonicDataParser
 
                 StreamWriter writer = new StreamWriter(@outputPath + "\\" + fileName + "_exportedPeptides.txt");
 
-                string headers = "PID\tProtRank\tSequence\tPeptideParseFriendly\tPos.\tMods(variable)\tGlycans\tPEP2D\tPEP1D\t|Log Prob|\tScore\tDeltaScore\t" +
+                string headers = "ProtRank\tSequence\tPeptideParseFriendly\tPos.\tMods(variable)\tGlycans\tPEP2D\tPEP1D\t|Log Prob|\tScore\tDeltaScore\t" +
                                  "Delta Mod.Score\tz\tObs.m/z\tCalc.m/z\tppmerr.\tObs.MH\tCalc.MH\tCleavage\tGlycansPos.\tProteinName\tProt.Id\t" +
-                                "ScanTime\tScan #\tMods(fixed)\tFDR2D\tFDR1D\tFDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D\tIntensity";
+                                "ScanTime\tScan #\tMods(fixed)\tFDR2D\tFDR1D\tFDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D";
 
                 writer.WriteLine(headers);
 

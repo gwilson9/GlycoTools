@@ -9,8 +9,8 @@ namespace ByonicDataParser
     class PSM
     {
 
-        //tring PID;                                                                      //Ignored for now
-        public string protRank;                                                                //Ignored for now
+        //tring PID;                                                                      
+        public string protRank;                                                                
         public string PQMsID;
         public string sequence;
         public string peptidesToBeParsed;
@@ -24,14 +24,14 @@ namespace ByonicDataParser
 
         public double PEP2D;
         public double PEP1D;
-        //double logProb;                                                                 //Ignored for now
+        double logProb;                                                                 
         public double score;
         public double deltaScore;
         public double deltaModScore;
         public int charge;
         public double mzObs;
         public double mzCalc;
-        double ppmError;                                                                //Ignored for now
+        double ppmError;                                                                
         public double obsMH;
         public double calcMH;
         public string cleavage;
@@ -62,7 +62,7 @@ namespace ByonicDataParser
                     double PEP2D, double PEP1D, double score, double deltaScore, double deltaModScore,
                     int charge, double mzObs, double mzCalc, double obsMH, double calcMH, string cleavage,
                     string proteinName, int protID, int scanNumber, double FDR2D, double FDR1D, double FDR2Dunique,
-                    double FDR1Dunique, double qvalue2D, double qvalue1D, double intensity, string scanTime, string protRank)
+                    double FDR1Dunique, double qvalue2D, double qvalue1D, double intensity, string scanTime, string protRank, double logProb)
         {
             this.PQMsID = PQMsID;
             this.sequence = sequence;
@@ -93,14 +93,19 @@ namespace ByonicDataParser
             this.scanTime = scanTime;
             this.ppmError = Math.Abs(mzCalc - mzObs)/mzCalc * 1000000;
             this.protRank = protRank;
+            this.logProb = logProb;
         }
 
         public override string ToString()
         {
-            string returnString = "\t"+ protRank + "\t" + sequence + "\t" + peptidesToBeParsed + "\t" + peptideStartPosition + "\t" + modsToBeParsed + "\t" + glycansToBeParsed + "\t" + PEP2D + "\t" +
-                                   PEP1D + "\t\t" + score + "\t" + deltaScore + "\t" + deltaModScore + "\t" + charge + "\t" + mzObs + "\t" + mzCalc + "\t" + ppmError + "\t" + obsMH + "\t" + calcMH + "\t" +
-                                   cleavage + "\t" + glycanPositions + "\t" + proteinName + "\t" + protID + "\t" + Math.Round(double.Parse(scanTime)/60,2)  + "\t" + scanNumber + "\t" + modsFixed + "\t" + FDR2D + "\t" + FDR1D + "\t" +
-                                   FDR2Dunique + "\t" + FDR1Dunique + "\t" + qvalue2D + "\t" + qvalue1D + "\t" + intensity;
+            string returnString =  protRank + "\t" + sequence + "\t" + peptidesToBeParsed + "\t" + 
+                                   peptideStartPosition + "\t" + modsToBeParsed + "\t" + glycansToBeParsed + 
+                                   "\t" + PEP2D + "\t" + PEP1D + "\t" + logProb + "\t" + score + "\t" + deltaScore + "\t" + 
+                                   deltaModScore + "\t" + charge + "\t" + mzObs + "\t" + mzCalc + "\t" + ppmError + 
+                                   "\t" + obsMH + "\t" + calcMH + "\t" + cleavage + "\t" + glycanPositions + "\t" + 
+                                   proteinName + "\t" + protID + "\t" + Math.Round(double.Parse(scanTime)/60,2)  + "\t" + 
+                                   scanNumber + "\t" + modsFixed + "\t" + FDR2D + "\t" + FDR1D + "\t" + FDR2Dunique + 
+                                   "\t" + FDR1Dunique + "\t" + qvalue2D + "\t" + qvalue1D ;
 
             return returnString;
         }
