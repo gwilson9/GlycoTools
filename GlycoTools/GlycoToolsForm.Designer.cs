@@ -107,7 +107,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::GlycoTools.Properties.Resources._20181112_GlycoTools_Images_Artboard_1_copy_7;
+            this.button4.BackgroundImage = global::GlycoTools.Properties.Resources._20181112_GlycoTools_Images_Artboard_1_copy_71;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Vani", 8.25F);

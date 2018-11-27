@@ -66,12 +66,17 @@ namespace GlycoCompiler
         public double intensity;
         public string byonicIntensity;
         public List<string> glycanTypes;
+        public string file;
 
-        public GlycoPSM(Peptide peptide, double peptideMonoMass, string sequenceWithMods, List<string> mods, List<string> glycans, List<int> glycanPositions, string uniprotID, double PEP2D, double PEP1D, double logProb, double score,
-            double deltaScore, double deltaModScore, double mzObs, double mzCalc, int charge, int numberOfSites, double ppmError, double obsMH, double calcMH, string cleavage, string proteinName,
-            int peptideStartPosition, double scanTime, int scanNumber, double FDR2D, double FDR1D, double FDR2Dunique, double FDR1Dunique, double qvalue2D, double qvalue1D, string fragmentation,
-            int masterScan, double peak126, double peak138, double peak144, double peak168, double peak186, double peak204, double peak274, double peak292, double peak366, double GlcNAcGalNAcratio, bool isGlycoPeptide,
-            bool seenWithHCD, bool seenWithETD, bool NXSmotif, bool NXTmotif, bool isLocalized, bool Nlinked, bool Olinked, bool matchedToUniprot, string evidenceType, int evidenceNumber, double intensity, string byonicIntensity)
+        public GlycoPSM(Peptide peptide, double peptideMonoMass, string sequenceWithMods, List<string> mods, 
+            List<string> glycans, List<int> glycanPositions, string uniprotID, double PEP2D, double PEP1D, double logProb, double score,
+            double deltaScore, double deltaModScore, double mzObs, double mzCalc, int charge, int numberOfSites, double ppmError, 
+            double obsMH, double calcMH, string cleavage, string proteinName, int peptideStartPosition, double scanTime, 
+            int scanNumber, double FDR2D, double FDR1D, double FDR2Dunique, double FDR1Dunique, double qvalue2D, double qvalue1D, string fragmentation,
+            int masterScan, double peak126, double peak138, double peak144, double peak168, double peak186, double peak204, double peak274, 
+            double peak292, double peak366, double GlcNAcGalNAcratio, bool isGlycoPeptide,bool seenWithHCD, bool seenWithETD, bool NXSmotif, 
+            bool NXTmotif, bool isLocalized, bool Nlinked, bool Olinked, bool matchedToUniprot, string evidenceType, int evidenceNumber, 
+            double intensity, string byonicIntensity, string file)
         {
             this.peptide = peptide;
             this.peptideMonoMass = peptideMonoMass;
@@ -130,6 +135,7 @@ namespace GlycoCompiler
             this.intensity = intensity;
             this.byonicIntensity = byonicIntensity;
             this.glycanTypes = new List<string> ();
+            this.file = file;
 
             foreach(string glycan in glycans)
             {

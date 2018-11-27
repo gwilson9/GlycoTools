@@ -307,7 +307,6 @@ namespace ScanAssigner
                         if (deltaModScore >= 10)
                             isLocalized = true;
 
-
                         GlycoPSM psm = new GlycoPSM(peptide, peptideMonoMass, peptide.SequenceWithModifications, mods, glycans, glycanMasses, glycanPositionsList, 
                             uniprotID, PEP2D, logProb, score, deltaScore, deltaModScore, mzObs, charge, numberOfSites, ppmError, obsMH, cleavage, proteinName, 
                             peptideStartPosition, scanTime, scanNumber, FDR2D, FDR2Dunique, qvalue2D, fragmentation, isGlycoPeptide, seenWithHCD, seenWithETD, 

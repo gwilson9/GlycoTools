@@ -389,9 +389,12 @@ namespace ScanAssigner
             // Start LFQ Writer
             StreamWriter quantWriter = new StreamWriter(@outputFolderPath + "\\" + file + "_list_Quant.txt");
 
-            quantWriter.WriteLine("Prot.Rank\tSequence\tPeptideParseFriendly\tPeptide\tPos.\tMods(variable)\tGlycans\tPEP2D\tPEP1D\t|Log Prob|\tScore\tDeltaScore\tDelta Mod.Score\tCharge\tObs.m/z\t" +
-            "Precursor Theoretical m/z (Th)\tppmerr.\tObs.MH\tCalc.MH\tCleavage\tGlycansPos.\tProteinName\tProt.Id\tScanTime\tSpectrum Number\tMods(fixed)\tFDR2D\tFDR1D\t" +
-            "FDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D\tisGlycoPeptide\tmodsPassedCheck\tpositionPassedCheck\tfragmentation\tMasterScan\tLFQ Intensity");
+            quantWriter.WriteLine("Prot.Rank\tSequence\tPeptideParseFriendly\tPeptide\tPos.\tMods(variable)\tGlycans"+
+                                  "\tPEP2D\tPEP1D\t|Log Prob|\tScore\tDeltaScore\tDelta Mod.Score\tCharge\tObs.m/z\t" +
+                                  "Precursor Theoretical m/z (Th)\tppmerr.\tObs.MH\tCalc.MH\tCleavage\tGlycansPos.\tProteinName"+
+                                  "\tProt.Id\tScanTime\tSpectrum Number\tMods(fixed)\tFDR2D\tFDR1D\t" +
+                                  "FDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D\tisGlycoPeptide\tmodsPassedCheck"+
+                                  "\tpositionPassedCheck\tfragmentation\tMasterScan\tLFQ Intensity");
 
             foreach (PSM psmQ in allPsmsQuant)
             {

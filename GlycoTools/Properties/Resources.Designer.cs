@@ -233,6 +233,16 @@ namespace GlycoTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20181112_GlycoTools_Images_Artboard_1_copy_71 {
+            get {
+                object obj = ResourceManager.GetObject("20181112_GlycoTools_Images_Artboard 1 copy 71", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _20181112_GlycoTools_Images_Artboard_1_copy1 {
             get {
                 object obj = ResourceManager.GetObject("20181112_GlycoTools_Images_Artboard 1 copy1", resourceCulture);

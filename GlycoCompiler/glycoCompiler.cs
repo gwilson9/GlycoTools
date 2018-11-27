@@ -48,7 +48,7 @@ namespace GlycoCompiler
                             firstLine += header + "\t";
                         }
 
-                        writer.WriteLine(firstLine);
+                        writer.WriteLine(firstLine + "File");
 
                         flag = false;
                     }
@@ -60,7 +60,7 @@ namespace GlycoCompiler
                         {
                             nextLine += reader[header] + "\t";
                         }
-                        writer.WriteLine(nextLine);
+                        writer.WriteLine(nextLine + Path.GetFileName(file));
                     }
                 }      
             }
@@ -179,6 +179,7 @@ namespace GlycoCompiler
                     string fragmentation = csv["fragmentation"];
                     int masterScan = int.Parse(csv["MasterScan"]);
                     string byonicIntensity = "NA"; //csv["ByonicIntensity"];
+                    string file = csv["File"];
 
                     double peak126 = 0;
                     double peak138 = 0;
@@ -391,11 +392,16 @@ namespace GlycoCompiler
 
                         if (deltaModScore >= 10)
                             isLocalized = true;
+                        
+                        
 
-
-                        GlycoPSM psm = new GlycoPSM(peptide, peptideMonoMass, peptide.SequenceWithModifications, mods, glycans, glycanPositionsList, uniprotID, PEP2D, PEP1D, logProb, score, deltaScore, deltaModScore, mzObs, mzCalc, charge, numberOfSites, ppmError,
-                            obsMH, calcMH, cleavage, proteinName, peptideStartPosition, scanTime, scanNumber, FDR2D, FDR1D, FDR2Dunique, FDR1Dunique, qvalue2D, qvalue1D, fragmentation, masterScan, peak126, peak138, peak144,
-                            peak168, peak186, peak204, peak274, peak292, peak366, GlcNAcGalNAcratio, isGlycoPeptide, seenWithHCD, seenWithETD, NXSmotif, NXTmotif, isLocalized, Nlinked, Olinked, matchedToUniprot, uniprotEvidenceType, uniprotEvidenceNumber, intensity, byonicIntensity);
+                        GlycoPSM psm = new GlycoPSM(peptide, peptideMonoMass, peptide.SequenceWithModifications, mods, 
+                            glycans, glycanPositionsList, uniprotID, PEP2D, PEP1D, logProb, score, deltaScore, deltaModScore, 
+                            mzObs, mzCalc, charge, numberOfSites, ppmError, obsMH, calcMH, cleavage, proteinName, peptideStartPosition, 
+                            scanTime, scanNumber, FDR2D, FDR1D, FDR2Dunique, FDR1Dunique, qvalue2D, qvalue1D, fragmentation, masterScan, 
+                            peak126, peak138, peak144, peak168, peak186, peak204, peak274, peak292, peak366, GlcNAcGalNAcratio, isGlycoPeptide, 
+                            seenWithHCD, seenWithETD, NXSmotif, NXTmotif, isLocalized, Nlinked, Olinked, matchedToUniprot, uniprotEvidenceType, 
+                            uniprotEvidenceNumber, intensity, byonicIntensity, file);
 
 
                         if (!uniqueSequencesDictionary.ContainsKey(peptide.Sequence))
@@ -443,9 +449,13 @@ namespace GlycoCompiler
 
                     if (peptide.Length > 4 && FDR2D <= 0.01 && isGlycoPeptide && score >= scoreFilter)
                     {
-                        GlycoPSM psmTargetORDecoy = new GlycoPSM(peptide, peptideMonoMass, peptide.SequenceWithModifications, mods, glycans, glycanPositionsList, uniprotID, PEP2D, PEP1D, logProb, score, deltaScore, deltaModScore, mzObs, mzCalc, charge, numberOfSites, ppmError,
-                                obsMH, calcMH, cleavage, proteinName, peptideStartPosition, scanTime, scanNumber, FDR2D, FDR1D, FDR2Dunique, FDR1Dunique, qvalue2D, qvalue1D, fragmentation, masterScan, peak126, peak138, peak144,
-                                peak168, peak186, peak204, peak274, peak292, peak366, GlcNAcGalNAcratio, isGlycoPeptide, seenWithHCD, seenWithETD, NXSmotif, NXTmotif, isLocalized, Nlinked, Olinked, matchedToUniprot, uniprotEvidenceType, uniprotEvidenceNumber, intensity, byonicIntensity);
+                        GlycoPSM psmTargetORDecoy = new GlycoPSM(peptide, peptideMonoMass, peptide.SequenceWithModifications, mods, glycans, 
+                                glycanPositionsList, uniprotID, PEP2D, PEP1D, logProb, score, deltaScore, deltaModScore, mzObs, mzCalc, charge, 
+                                numberOfSites, ppmError, obsMH, calcMH, cleavage, proteinName, peptideStartPosition, scanTime, scanNumber, FDR2D, 
+                                FDR1D, FDR2Dunique, FDR1Dunique, qvalue2D, qvalue1D, fragmentation, masterScan, peak126, peak138, peak144,
+                                peak168, peak186, peak204, peak274, peak292, peak366, GlcNAcGalNAcratio, isGlycoPeptide, seenWithHCD, seenWithETD, 
+                                NXSmotif, NXTmotif, isLocalized, Nlinked, Olinked, matchedToUniprot, uniprotEvidenceType, uniprotEvidenceNumber, 
+                                intensity, byonicIntensity, file);
 
                         glycoPSMs.Add(psmTargetORDecoy);
                         if (fragmentation.Equals("HCD"))
@@ -463,9 +473,12 @@ namespace GlycoCompiler
                         }
                     }
 
-                    GlycoPSM psmTargetORDecoyNoFilter = new GlycoPSM(peptide, peptideMonoMass, peptide.SequenceWithModifications, mods, glycans, glycanPositionsList, uniprotID, PEP2D, PEP1D, logProb, score, deltaScore, deltaModScore, mzObs, mzCalc, charge, numberOfSites, ppmError,
-                        obsMH, calcMH, cleavage, proteinName, peptideStartPosition, scanTime, scanNumber, FDR2D, FDR1D, FDR2Dunique, FDR1Dunique, qvalue2D, qvalue1D, fragmentation, masterScan, peak126, peak138, peak144,
-                        peak168, peak186, peak204, peak274, peak292, peak366, GlcNAcGalNAcratio, isGlycoPeptide, seenWithHCD, seenWithETD, NXSmotif, NXTmotif, isLocalized, Nlinked, Olinked, matchedToUniprot, uniprotEvidenceType, uniprotEvidenceNumber, intensity, byonicIntensity);
+                    GlycoPSM psmTargetORDecoyNoFilter = new GlycoPSM(peptide, peptideMonoMass, peptide.SequenceWithModifications, mods, glycans, 
+                        glycanPositionsList, uniprotID, PEP2D, PEP1D, logProb, score, deltaScore, deltaModScore, mzObs, mzCalc, charge, numberOfSites, 
+                        ppmError, obsMH, calcMH, cleavage, proteinName, peptideStartPosition, scanTime, scanNumber, FDR2D, FDR1D, FDR2Dunique, FDR1Dunique, 
+                        qvalue2D, qvalue1D, fragmentation, masterScan, peak126, peak138, peak144, peak168, peak186, peak204, peak274, peak292, peak366, 
+                        GlcNAcGalNAcratio, isGlycoPeptide, seenWithHCD, seenWithETD, NXSmotif, NXTmotif, isLocalized, Nlinked, Olinked, matchedToUniprot, 
+                        uniprotEvidenceType, uniprotEvidenceNumber, intensity, byonicIntensity, file);
 
                     glycoPSMsNoFilter.Add(psmTargetORDecoyNoFilter);
                     if (fragmentation.Equals("HCD"))
@@ -1570,9 +1583,10 @@ namespace GlycoCompiler
 
             ////////////////////////////////////////////////////////////count and print PSMs
 
-            outputPSMs.WriteLine("Sequence\tUniprot\tProteinName\tseqWithMods\tPeptideStartPos.\tMods\tGlycans\tGlycanTypes\tGlycanPositions\t#GlycoSitesOnPep\tPEP2D\tFDR2D\tFDR2DUniq\tqvalue2D\tPEP1D\tFDR1D\tFDR1DUniq\tqvalue1D" +
-                        "\tlogProb\tScore\tDeltaScore\tDeltaModScore\tCharge\tmzObs\tmxCalc\tobsMH\tcalcMH\tPepMassNoMod\tCleavage\tscanTime\tScanNumber\tMasterScan\tFragmentation\tIsGlycoPeptide\tSeenWithHCD\tSeenWithETD\tLocalized" +
-                        "\tNlinked\tOlinked\tNXSmotif\tNXTmotif\tMatchedToUniprot\tEvidence\tEvidence#\tPeak126\tPeak138\tPeak144\tPeak168\tPeak186\tPeak204\tPeak274\tPeak292\tPeak366\tGlcNAcRatio");
+            outputPSMs.WriteLine("Sequence\tUniprot\tProteinName\tseqWithMods\tPeptideStartPos.\tMods\tGlycans\tGlycanTypes\tGlycanPositions\t#GlycoSitesOnPep\t"+
+                                "PEP2D\tFDR2D\tFDR2DUniq\tqvalue2D\tPEP1D\tFDR1D\tFDR1DUniq\tqvalue1D\tlogProb\tScore\tDeltaScore\tDeltaModScore\tCharge\tmzObs"+
+                                "\tmxCalc\tobsMH\tcalcMH\tPepMassNoMod\tCleavage\tscanTime\tScanNumber\tMasterScan\tFragmentation\tIsGlycoPeptide\tSeenWithHCD\t"+
+                                "SeenWithETD\tLocalized\tNlinked\tOlinked\tNXSmotif\tNXTmotif\tMatchedToUniprot\tEvidence\tEvidence#\tGlcNAcRatio\tFile");
 
             int countPSMs = 0;
             int countLocalizedPSMs = 0;
@@ -1708,14 +1722,15 @@ namespace GlycoCompiler
 
 
 
-                    outputPSMs.WriteLine(psm.peptide.Sequence + "\t" + psm.uniprotID + "\t" + psm.proteinName + "\t" + psm.sequenceWithMods + "\t" + psm.peptideStartPosition + "\t" + modsOnPep + "\t" 
-                        + glycansOnPep + "\t" + glycanTypes + "\t" + glycanPositionsInPep + "\t" + psm.numberOfSites + "\t" + psm.PEP2D + "\t" + psm.FDR2D + "\t" + psm.FDR2Dunique + "\t" + psm.qvalue2D 
-                        + "\t" + psm.PEP1D + "\t" + psm.FDR1D + "\t" + psm.FDR1Dunique + "\t" + psm.qvalue1D + "\t" + psm.logProb + "\t" + psm.score + "\t" + psm.deltaScore + "\t" + psm.deltaModScore 
-                        + "\t" + psm.charge + "\t" + psm.mzObs + "\t" + psm.mzCalc + "\t" + psm.obsMH + "\t" + psm.calcMH + "\t" + psm.peptideMonoMass + "\t" + psm.cleavage + "\t" + psm.scanTime + "\t" 
-                        + psm.scanNumber + "\t" + psm.masterScan + "\t" + psm.fragmentation + "\t" + psm.isGlycoPeptide + "\t" + psm.seenWithHCD + "\t" + psm.seenWithETD + "\t" + psm.isLocalized + "\t" 
-                        + psm.Nlinked + "\t" + psm.Olinked + "\t" + psm.NXSmotif + "\t" + psm.NXTmotif + "\t" + psm.matchedToUniprot + "\t" + psm.evidenceType + "\t" + psm.evidenceNumber + "\t" + psm.peak126 
-                        + "\t" + psm.peak138 + "\t" + psm.peak144 + "\t" + psm.peak168 + "\t" + psm.peak186 + "\t" + psm.peak204 + "\t" + psm.peak274 + "\t" + psm.peak292 + "\t" + psm.peak366 + "\t" 
-                        + psm.GlcNAcGalNAcratio);
+                    outputPSMs.WriteLine(psm.peptide.Sequence + "\t" + psm.uniprotID + "\t" + psm.proteinName + "\t" + psm.sequenceWithMods + "\t" + 
+                        psm.peptideStartPosition + "\t" + modsOnPep + "\t" + glycansOnPep + "\t" + glycanTypes + "\t" + glycanPositionsInPep + "\t" + 
+                        psm.numberOfSites + "\t" + psm.PEP2D + "\t" + psm.FDR2D + "\t" + psm.FDR2Dunique + "\t" + psm.qvalue2D + "\t" + psm.PEP1D + 
+                        "\t" + psm.FDR1D + "\t" + psm.FDR1Dunique + "\t" + psm.qvalue1D + "\t" + psm.logProb + "\t" + psm.score + "\t" + psm.deltaScore + 
+                        "\t" + psm.deltaModScore  + "\t" + psm.charge + "\t" + psm.mzObs + "\t" + psm.mzCalc + "\t" + psm.obsMH + "\t" + psm.calcMH + "\t" + 
+                        psm.peptideMonoMass + "\t" + psm.cleavage + "\t" + psm.scanTime + "\t" + psm.scanNumber + "\t" + psm.masterScan + "\t" + 
+                        psm.fragmentation + "\t" + psm.isGlycoPeptide + "\t" + psm.seenWithHCD + "\t" + psm.seenWithETD + "\t" + psm.isLocalized + "\t" 
+                        + psm.Nlinked + "\t" + psm.Olinked + "\t" + psm.NXSmotif + "\t" + psm.NXTmotif + "\t" + psm.matchedToUniprot + "\t" + psm.evidenceType + 
+                        "\t" + psm.evidenceNumber + "\t" + psm.GlcNAcGalNAcratio + "\t" + psm.file);
                 }
             }
 
