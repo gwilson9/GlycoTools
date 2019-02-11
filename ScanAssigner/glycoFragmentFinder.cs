@@ -43,12 +43,8 @@ namespace ScanAssigner
             StreamReader inputFile = new StreamReader(@resultFile);
             StreamReader UniprotGlycoDBfile = new StreamReader(uniprotGlycoDBfile);
 
-            int scoreFilter = 50;
-            int localizationFilter = 10;
-            int logProbFilter = 1;
-
-            StreamWriter outputSummary = new StreamWriter(outputPath + fileName + "_scoredSpectra_Filter.txt");
-            StreamWriter outputEachFragment = new StreamWriter(outputPath + fileName + "_allFragments_Filter.txt");
+            StreamWriter outputSummary = new StreamWriter(outputPath + fileName + "_scoredSpectra.txt");
+            StreamWriter outputEachFragment = new StreamWriter(outputPath + fileName + "_allFragments.txt");
             //StreamWriter outputPeptideFragments = new StreamWriter(outputPath + fileName + "_peptideFragments_Filter" + scoreFilter + ".txt");
             //StreamWriter outputGlycanFragments = new StreamWriter(outputPath + fileName + "_glycanFragments_Filter" + scoreFilter + ".txt");
             //StreamWriter outputOxoniumFragments = new StreamWriter(outputPath + fileName + "_oxoniumFragments_Filter" + scoreFilter + ".txt");
@@ -201,7 +197,7 @@ namespace ScanAssigner
 
 
 
-                    if (isGlycoPeptide && !proteinName.Contains("DECOY") && !proteinName.Contains("Reverse") && peptide.Length > 4 && FDR2D <= 0.01 && score >= scoreFilter)          //!!!!!HERE IS WHERE SCORE CUTOFF OF 50 IS SET!!!!!
+                    if (isGlycoPeptide && !proteinName.Contains("DECOY") && !proteinName.Contains("Reverse"))          //!!!!!HERE IS WHERE SCORE CUTOFF OF 50 IS SET!!!!!
                     {
 
                         if (!String.IsNullOrEmpty(modsToBeParsed))
@@ -489,7 +485,7 @@ namespace ScanAssigner
                         glycanFragmentList += fragment.fragmentName + ";";
                         glycanFragmentIntensity += fragment.fragmentSignal;
                         outputEachFragment.WriteLine(glycoPSM.scanNumber.ToString() + '\t' + glycoPSM.peptide.ToString() + '\t' + glycoPSM.peptide.Sequence + '\t' + glycoPSM.glycansToString() +
-                                   '\t' + glycoPSM.score + '\t' + glycoPSM.deltaModScore + '\t' + glycoPSM.logProb + '\t' + "Backbone" + '\t' + fragment.fragmentName + '\t' +
+                                   '\t' + glycoPSM.score + '\t' + glycoPSM.deltaModScore + '\t' + glycoPSM.logProb + '\t' + "Backbone" + '\t' + fragment.fragmentName.Split('_')[0] + '\t' +
                                    fragment.fragmentMZ + '\t' + fragment.fragmentCharge + '\t' + fragment.fragmentSignal);
                         /**
                         outputGlycanFragments.Write(fragment.fragmentName + "/" + fragment.fragmentNumber + "/" + fragment.fragmentMZ + 

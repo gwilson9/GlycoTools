@@ -20,7 +20,8 @@ namespace GlycoCompiler
             InitializeComponent();
             this.DragEnter += new DragEventHandler(Form1_DragEnter);
             this.DragDrop += new DragEventHandler(Form1_DragDrop);
-
+            var comboboxOptions = new int[] { 1, 2, 3 };
+            this.modCountFilter.DataSource = comboboxOptions; 
         }
 
         private void Form1_DragEnter(object sender, DragEventArgs e)
@@ -81,9 +82,13 @@ namespace GlycoCompiler
             foreach(string file in listBox1.Items)
             {
                 results.Add(file);
-            }
+            }            
 
-            var glycoCompiler = new glycoCompiler(results, textBox1.Text, textBox2.Text);
+            var glycoCompiler = new glycoCompiler(results, textBox1.Text, textBox2.Text, Double.Parse(scoreFilter.Value.ToString()), 
+                                                    Double.Parse(deltaModScoreFilter.Value.ToString()), 
+                                                    Double.Parse(logProbFilter.Value.ToString()),
+                                                    Double.Parse(pepLengthFilter.Value.ToString()), Int32.Parse(modCountFilter.Text));
+
             glycoCompiler.UpdateProgress += HandleUpdateProgress;
             prgProgress.Value = prgProgress.Minimum;
 

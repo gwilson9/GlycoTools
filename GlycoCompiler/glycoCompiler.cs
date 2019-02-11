@@ -17,18 +17,29 @@ namespace GlycoCompiler
         string uniprotGlycoDBFile;
         string outputFolder;
         List<double> glycanMasses = new List<double>();
+        double scoreFilter;
+        double deltaModFilter;
+        double logProbFilter;
+        double pepLengthFilter;
+        int modCountFilter;
 
-        public glycoCompiler( List<string> inputFilePaths, string uniprotGlycoDBFile, string outputFolder)
+        public glycoCompiler( List<string> inputFilePaths, string uniprotGlycoDBFile, string outputFolder, double scoreFilter,
+                                double deltaModFilter, double logProbFilter, double pepLengthFilter, int modCountFilter)
         {
             this.inputFilePaths = inputFilePaths;
             this.uniprotGlycoDBFile = uniprotGlycoDBFile;
             this.outputFolder = outputFolder;
+            this.scoreFilter = scoreFilter;
+            this.deltaModFilter = deltaModFilter;
+            this.logProbFilter = logProbFilter;
+            this.pepLengthFilter = pepLengthFilter;
+            this.modCountFilter = modCountFilter;
         }
 
         public void compile()
         {
             OnUpdateProgress(0.1);
-            StreamWriter writer = new StreamWriter(@outputFolder + "\\combinedList.txt");
+            StreamWriter writer = new StreamWriter(@outputFolder + "\\combinedList_Filtered.txt");
 
             //Concatenate Files
             bool flag = true;
@@ -57,10 +68,13 @@ namespace GlycoCompiler
                     {
                         string nextLine = "";
 
-                        if (Double.Parse(reader["Delta Mod.Score"]) > 10 &&
-                                Double.Parse(reader["Score"]) > 150 &&
-                                Math.Abs(Math.Log10(double.Parse(reader["PEP1D"]))) > 1 &&
-                                !reader["Glycans"].Contains(';')
+                        if (Double.Parse(reader["Delta Mod.Score"]) >= deltaModFilter &&
+                                Double.Parse(reader["Score"]) >= scoreFilter &&
+                                Double.Parse(reader["|Log Prob|"]) >= logProbFilter &&
+                                Double.Parse(reader["Delta Mod.Score"]) >= deltaModFilter &&
+                                reader["Peptide"].Length >= pepLengthFilter &&
+                                reader["Glycans"].Split(';').Count() <= modCountFilter &&
+                                Double.Parse(reader["FDR1D"]) <= 0.01
                                 )
                         {
                             foreach (string header in headers)
@@ -81,14 +95,12 @@ namespace GlycoCompiler
             OnUpdateProgress(0.25);
 
             // Initialize readers for combined list and uniprot glyco File 
-            StreamReader inputFile = new StreamReader(@outputFolder + "\\combinedList.txt");
+            StreamReader inputFile = new StreamReader(@outputFolder + "\\combinedList_Filtered.txt");
             StreamReader UniprotGlycoDBfile = new StreamReader(@uniprotGlycoDBFile);
-            string outputPath = @outputFolder;
-
-            int scoreFilter = 50;
+            string outputPath = @outputFolder;            
 
             // Initialize writers
-            StreamWriter outputSummary = new StreamWriter(outputPath + "\\_dataSummary_Filter" + scoreFilter + ".txt");
+            StreamWriter outputSummary = new StreamWriter(outputPath + "\\_dataSummary_.txt");
             StreamWriter outputPSMs = new StreamWriter(outputPath + "\\_GlycoPSMs.txt");
             StreamWriter outputPeptides = new StreamWriter(outputPath + "\\_GlycoPeptides.txt");
             StreamWriter outputSequences = new StreamWriter(outputPath + "\\_GlycoUniqSeq.txt");
@@ -279,7 +291,7 @@ namespace GlycoCompiler
 
 
 
-                    if (isGlycoPeptide && !proteinName.Contains("DECOY") && !proteinName.Contains("Reverse") && peptide.Length > 4 && FDR2D <= 0.01 && score >= scoreFilter)          //!!!!!HERE IS WHERE SCORE CUTOFF OF 50 IS SET!!!!!
+                    if (isGlycoPeptide && !proteinName.Contains("DECOY"))          
                     {
 
                         if (!String.IsNullOrEmpty(modsToBeParsed))

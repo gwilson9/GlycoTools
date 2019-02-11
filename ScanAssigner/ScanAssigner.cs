@@ -256,88 +256,86 @@ namespace ScanAssigner
                                           FDR2Dunique, FDR1Dunique, qvalue2D, qvalue1D, isGlycoPeptide, fragmentation, byonicSequence, 
                                           modsPassedCheck, masterScan, positionsPassedCheck, byonicIntensity);//, spectrum);
 
-
-                        if (peptide.Length > 4 && FDR2D <= 0.01)
-                        {
-                            allPSMs.Add(psm);
+                       
+                        allPSMs.Add(psm);
                             
+                        if (fragmentation.Equals("HCD"))
+                        {
+                            hcdPSMs.Add(psm);
+                        }
+                        if (fragmentation.Equals("ETD"))
+                        {
+                            etdPSMs.Add(psm);
+                        }
+
+                        if (isGlycoPeptide)
+                        {
+                            allGlycoPSMs.Add(psm);
                             if (fragmentation.Equals("HCD"))
                             {
-                                hcdPSMs.Add(psm);
+                                hcdGlycoPSMs.Add(psm);
                             }
                             if (fragmentation.Equals("ETD"))
                             {
-                                etdPSMs.Add(psm);
+                                etdGlycoPSMs.Add(psm);
+                            }
+                        }
+
+                        if (!proteinName.Contains("DECOY") && !proteinName.Contains("Reverse") && modsPassedCheck && positionsPassedCheck)
+                        {
+                            if (!allPSMsNODECOY.ContainsKey(uniqueSequence))
+                            {
+                                allPSMsNODECOY.Add(uniqueSequence, new List<PSM>());
+                            }
+                            allPSMsNODECOY[uniqueSequence].Add(psm);
+
+                            if (fragmentation.Equals("HCD"))
+                            {
+                                if (!hcdPSMsNODECOY.ContainsKey(uniqueSequence))
+                                {
+                                    hcdPSMsNODECOY.Add(uniqueSequence, new List<PSM>());
+                                }
+                                hcdPSMsNODECOY[uniqueSequence].Add(psm);
+                            }
+
+                            if (fragmentation.Equals("ETD"))
+                            {
+                                if (!etdPSMsNODECOY.ContainsKey(uniqueSequence))
+                                {
+                                    etdPSMsNODECOY.Add(uniqueSequence, new List<PSM>());
+                                }
+                                etdPSMsNODECOY[uniqueSequence].Add(psm);
                             }
 
                             if (isGlycoPeptide)
                             {
-                                allGlycoPSMs.Add(psm);
-                                if (fragmentation.Equals("HCD"))
+                                if (!allGlycoPSMsNODECOY.ContainsKey(uniqueSequence))
                                 {
-                                    hcdGlycoPSMs.Add(psm);
+                                    allGlycoPSMsNODECOY.Add(uniqueSequence, new List<PSM>());
                                 }
-                                if (fragmentation.Equals("ETD"))
-                                {
-                                    etdGlycoPSMs.Add(psm);
-                                }
-                            }
-
-                            if (!proteinName.Contains("DECOY") && !proteinName.Contains("Reverse") && modsPassedCheck && positionsPassedCheck)
-                            {
-                                if (!allPSMsNODECOY.ContainsKey(uniqueSequence))
-                                {
-                                    allPSMsNODECOY.Add(uniqueSequence, new List<PSM>());
-                                }
-                                allPSMsNODECOY[uniqueSequence].Add(psm);
+                                allGlycoPSMsNODECOY[uniqueSequence].Add(psm);
 
                                 if (fragmentation.Equals("HCD"))
                                 {
-                                    if (!hcdPSMsNODECOY.ContainsKey(uniqueSequence))
+                                    if (!hcdGlycoPSMsNODECOY.ContainsKey(uniqueSequence))
                                     {
-                                        hcdPSMsNODECOY.Add(uniqueSequence, new List<PSM>());
+                                        hcdGlycoPSMsNODECOY.Add(uniqueSequence, new List<PSM>());
                                     }
-                                    hcdPSMsNODECOY[uniqueSequence].Add(psm);
+                                    hcdGlycoPSMsNODECOY[uniqueSequence].Add(psm);
                                 }
 
                                 if (fragmentation.Equals("ETD"))
                                 {
-                                    if (!etdPSMsNODECOY.ContainsKey(uniqueSequence))
+                                    if (!etdGlycoPSMsNODECOY.ContainsKey(uniqueSequence))
                                     {
-                                        etdPSMsNODECOY.Add(uniqueSequence, new List<PSM>());
+                                        etdGlycoPSMsNODECOY.Add(uniqueSequence, new List<PSM>());
                                     }
-                                    etdPSMsNODECOY[uniqueSequence].Add(psm);
-                                }
-
-                                if (isGlycoPeptide)
-                                {
-                                    if (!allGlycoPSMsNODECOY.ContainsKey(uniqueSequence))
-                                    {
-                                        allGlycoPSMsNODECOY.Add(uniqueSequence, new List<PSM>());
-                                    }
-                                    allGlycoPSMsNODECOY[uniqueSequence].Add(psm);
-
-                                    if (fragmentation.Equals("HCD"))
-                                    {
-                                        if (!hcdGlycoPSMsNODECOY.ContainsKey(uniqueSequence))
-                                        {
-                                            hcdGlycoPSMsNODECOY.Add(uniqueSequence, new List<PSM>());
-                                        }
-                                        hcdGlycoPSMsNODECOY[uniqueSequence].Add(psm);
-                                    }
-
-                                    if (fragmentation.Equals("ETD"))
-                                    {
-                                        if (!etdGlycoPSMsNODECOY.ContainsKey(uniqueSequence))
-                                        {
-                                            etdGlycoPSMsNODECOY.Add(uniqueSequence, new List<PSM>());
-                                        }
-                                        etdGlycoPSMsNODECOY[uniqueSequence].Add(psm);
-                                    }
+                                    etdGlycoPSMsNODECOY[uniqueSequence].Add(psm);
                                 }
                             }
-                            
                         }
+                            
+                        
 
                         /**
                         psm.Peak126 = GetPeak(psm, 126.055, rawFile);
