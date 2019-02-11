@@ -8,7 +8,7 @@ using CSMSL.Chemistry;
 
 namespace ScanAssigner
 {
-    class SugarMoiety
+    class SugarMoiety : IEquatable<SugarMoiety>
     {
         private string _name;
         private string _symbol;
@@ -34,6 +34,22 @@ namespace ScanAssigner
         public ChemicalFormula ChemicalFormula
         {
             get { return _chemicalFormula; }
+        }
+
+        public bool Equals(SugarMoiety other)
+        {  
+            if (other == null)
+                return false;
+
+            if (_name == other._name && _symbol == other._symbol)
+                return true;
+
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return _name.GetHashCode() + _symbol.GetHashCode();
         }
     }
 }

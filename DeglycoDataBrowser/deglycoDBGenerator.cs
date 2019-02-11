@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using LumenWorks.Framework.IO.Csv;
+using CSMSL;
+using CSMSL.IO;
 using CSMSL.Chemistry;
 using CSMSL.Proteomics;
 using System.Text.RegularExpressions;
@@ -197,12 +199,16 @@ namespace DeglycoDataBrowser
         public static Dictionary<string, string> parseDB(string pathIn)
         {
 
+            
+
 
             Dictionary<string, string> returnDict = new Dictionary<string, string>();
 
             List<string> badsequences = new List<string>();
 
-            StreamReader reader = new StreamReader(pathIn);
+            //StreamReader reader = new StreamReader(pathIn);
+
+            var reader = new FastaReader(pathIn);
 
             string uniprotID = "";
 
@@ -210,6 +216,16 @@ namespace DeglycoDataBrowser
 
             string sequence = "";
 
+            foreach (var fasta in reader.ReadNextFasta())
+            {
+                if (!fasta.IsDecoy)
+                {
+                    string desc = fasta.Description.Replace(",", ";");
+                    returnDict.Add(">" + desc, fasta.Sequence);
+                }                    
+            }
+
+            /**
             while (reader.Peek() >= 0)
             {
 
@@ -253,6 +269,7 @@ namespace DeglycoDataBrowser
                     }
                 }
             }
+    **/
 
             return returnDict;
         }

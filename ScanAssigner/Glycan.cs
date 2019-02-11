@@ -115,9 +115,17 @@ namespace ScanAssigner
             List<List<T>> tailCombos = GetAllCombos(list.Skip(1).ToList());
             tailCombos.ForEach(combo =>
             {
-                result.Add(new List<T>(combo));
+                if(!result.Any(c => c.SequenceEqual(combo)))
+                {
+                    result.Add(new List<T>(combo));                                   
+                }
+
                 combo.Add(list[0]);
-                result.Add(new List<T>(combo));
+
+                if (!result.Any(c => c.SequenceEqual(combo)))
+                {
+                    result.Add(new List<T>(combo));
+                }             
             });
             return result;
         }

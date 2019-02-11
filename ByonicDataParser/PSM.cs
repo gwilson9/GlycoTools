@@ -91,7 +91,7 @@ namespace ByonicDataParser
             this.qvalue1D = qvalue1D;
             this.intensity = intensity;
             this.scanTime = scanTime;
-            this.ppmError = Math.Abs(mzCalc - mzObs)/mzCalc * 1000000;
+            this.ppmError = (mzCalc - mzObs)/mzCalc * 1000000;
             this.protRank = protRank;
             this.logProb = logProb;
         }

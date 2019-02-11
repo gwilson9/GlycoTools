@@ -24,3 +24,17 @@ D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenera
 D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\obj\Debug\DeglycoDataBrowser.exe
 D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\obj\Debug\DeglycoDataBrowser.pdb
 D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\DeglycoDataBrowser\bin\Debug\CSMSL.xml
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\bin\Debug\DeglycoDataBrowser.exe.config
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\bin\Debug\DeglycoDataBrowser.exe
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\bin\Debug\DeglycoDataBrowser.pdb
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\bin\Debug\CSMSL.dll
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\bin\Debug\LumenWorks.Framework.IO.dll
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\bin\Debug\CSMSL.pdb
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\bin\Debug\CSMSL.xml
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\bin\Debug\LumenWorks.Framework.IO.xml
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\obj\Debug\DeglycoDataBrowser.csprojResolveAssemblyReference.cache
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\obj\Debug\DeglycoDataBrowser.Form1.resources
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\obj\Debug\DeglycoDataBrowser.Properties.Resources.resources
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\obj\Debug\DeglycoDataBrowser.csproj.GenerateResource.Cache
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\obj\Debug\DeglycoDataBrowser.exe
+C:\Users\gwilson\Desktop\Repo\GlycoTools\DeglycoDataBrowser\obj\Debug\DeglycoDataBrowser.pdb

@@ -56,11 +56,22 @@ namespace GlycoCompiler
                     while (reader.ReadNextRecord())
                     {
                         string nextLine = "";
-                        foreach(string header in headers)
+
+                        if (Double.Parse(reader["Delta Mod.Score"]) > 10 &&
+                                Double.Parse(reader["Score"]) > 150 &&
+                                Math.Abs(Math.Log10(double.Parse(reader["PEP1D"]))) > 1 &&
+                                !reader["Glycans"].Contains(';')
+                                )
                         {
-                            nextLine += reader[header] + "\t";
-                        }
-                        writer.WriteLine(nextLine + Path.GetFileName(file));
+                            foreach (string header in headers)
+                            {
+
+
+                                nextLine += reader[header] + "\t";
+
+                            }
+                            writer.WriteLine(nextLine + Path.GetFileName(file));
+                        }      
                     }
                 }      
             }
@@ -152,7 +163,7 @@ namespace GlycoCompiler
                     string glycansToBeParsed = csv["Glycans"];
                     double PEP2D = double.Parse(csv["PEP2D"]);
                     double PEP1D = double.Parse(csv["PEP1D"]);
-                    double logProb = double.Parse(csv["|Log Prob|"]);
+                    double logProb = Math.Abs(Math.Log10(PEP1D));
                     double score = double.Parse(csv["Score"]);
                     double deltaScore = double.Parse(csv["DeltaScore"]);
                     double deltaModScore = double.Parse(csv["Delta Mod.Score"]);

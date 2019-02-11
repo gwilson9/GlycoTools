@@ -44,9 +44,11 @@ namespace ScanAssigner
             StreamReader UniprotGlycoDBfile = new StreamReader(uniprotGlycoDBfile);
 
             int scoreFilter = 50;
+            int localizationFilter = 10;
+            int logProbFilter = 1;
 
-            StreamWriter outputSummary = new StreamWriter(outputPath + fileName + "_scoredSpectra_Filter" + scoreFilter + ".txt");
-            StreamWriter outputEachFragment = new StreamWriter(outputPath + fileName + "_allFragments_Filter" + scoreFilter + ".txt");
+            StreamWriter outputSummary = new StreamWriter(outputPath + fileName + "_scoredSpectra_Filter.txt");
+            StreamWriter outputEachFragment = new StreamWriter(outputPath + fileName + "_allFragments_Filter.txt");
             //StreamWriter outputPeptideFragments = new StreamWriter(outputPath + fileName + "_peptideFragments_Filter" + scoreFilter + ".txt");
             //StreamWriter outputGlycanFragments = new StreamWriter(outputPath + fileName + "_glycanFragments_Filter" + scoreFilter + ".txt");
             //StreamWriter outputOxoniumFragments = new StreamWriter(outputPath + fileName + "_oxoniumFragments_Filter" + scoreFilter + ".txt");
@@ -60,9 +62,8 @@ namespace ScanAssigner
                                     "GlycanFragIntensity\tOxoniumIntensity\tTIC\tFragmentList\tGlycanFragmentList\tOxoniumList");
             
 
-            outputEachFragment.WriteLine("Peptide\tSequenceOnly\tGlycan\tScanNumber\tFragmentation\tMZ\tCharge\tPeptideMass\t"+
-                                         "GlycanMass\tScore\tDeltaModScore\t2DFDR\t2DPEP\tSeqCoverage\tSeqCovNoNeutLoss\tGlycanSeqCov\t"+
-                                         "NumberOfFragments\tNeutralLossFragments\tGlycanFragments\tOxoniumFragments\tFragmentInfo");
+            outputEachFragment.WriteLine("ScanNumber\tPeptide\tSequence\tGlycan\tByonic Score\tDelta Mod Score\tLog Probability"+
+                                         "\tGlycanType\tProduct Ion\tFragment m/z\tFragment Charge\tFragment Intensity");
 
             /**
             outputPeptideFragments.WriteLine("Peptide\tSequenceOnly\tGlycan\tFraction\tScanNumber\tFragmentation\tMZ\tCharge\tPeptideMass\t"+
@@ -91,7 +92,6 @@ namespace ScanAssigner
                     string glycoType = csv["GlycoType"];
                     string evidenceType = csv["EvidenceType"];
                     int evidenceNumber = int.Parse(csv["EvidenceNumber"]);
-
                     UniProtGlycoSite databaseEntry = new UniProtGlycoSite(uniprotID, defLine, proteinMW, glycoSite, glycoType, evidenceType, evidenceNumber);
                     UniprotGlycoBD.Add(databaseEntry);
                 }
@@ -461,43 +461,18 @@ namespace ScanAssigner
                     peptideFragmentsMustIncludeGlycan = peptideFragmentsMustIncludeGlycan.Distinct().ToList();
                     oxoniumIons = oxoniumIons.Distinct().ToList();
 
-                    outputEachFragment.Write(glycoPSM.peptide.ToString() + "\t" + glycoPSM.peptide.Sequence + "\t" + glycoPSM.glycansToString() + "\t" + 
-                                             glycoPSM.scanNumber + "\t" + glycoPSM.fragmentation + "\t" + glycoPSM.mzObs + "\t" + glycoPSM.charge + "\t" + 
-                                             glycoPSM.obsMH + "\t" + glycanMass + "\t" + glycoPSM.score + "\t" + glycoPSM.deltaModScore + "\t" + glycoPSM.FDR2D + 
-                                             "\t" + glycoPSM.PEP2D + "\t" + sequenceCoverage + "\t" + sequenceCoverageOnlyGlycoFragments + "\t" + glycanSequenceCoverage + 
-                                             "\t" + peptideFragments.Count + "\t" + peptideNeutralLossFragments.Count + "\t" + peptideIntactGlycans.Count + "\t" + 
-                                             oxoniumIons.Count + "\t");
-
-                    /**
-                    outputPeptideFragments.Write(glycoPSM.peptide.ToString() + "\t" + glycoPSM.peptide.Sequence + "\t" + glycoPSM.glycans[0] + "\t" + fraction + "\t" + 
-                                                 glycoPSM.scanNumber + "\t" + glycoPSM.fragmentation + "\t" + glycoPSM.mzObs + "\t" + glycoPSM.charge + "\t" + glycoPSM.obsMH + 
-                                                 "\t" + glycanMass + "\t" + glycoPSM.score + "\t" + glycoPSM.deltaModScore + "\t" + glycoPSM.FDR2D + "\t" + glycoPSM.PEP2D + 
-                                                 "\t" + sequenceCoverage + "\t" + sequenceCoverageOnlyGlycoFragments + "\t" + glycanSequenceCoverage + "\t" + peptideFragments.Count + 
-                                                 "\t" + peptideNeutralLossFragments.Count + "\t");
-
-                    outputGlycanFragments.Write(glycoPSM.peptide.ToString() + "\t" + glycoPSM.peptide.Sequence + "\t" + glycoPSM.glycans[0] + "\t" + fraction + "\t" + 
-                                                glycoPSM.scanNumber + "\t" + glycoPSM.fragmentation + "\t" + glycoPSM.mzObs + "\t" + glycoPSM.charge + "\t" + glycoPSM.obsMH + "\t" + 
-                                                glycanMass + "\t" + glycoPSM.score + "\t" + glycoPSM.deltaModScore + "\t" + glycoPSM.FDR2D + "\t" + glycoPSM.PEP2D + "\t" +
-                                                sequenceCoverage + "\t" + sequenceCoverageOnlyGlycoFragments + "\t" + glycanSequenceCoverage + "\t" + peptideIntactGlycans.Count + "\t");
-
-                    outputOxoniumFragments.Write(glycoPSM.peptide.ToString() + "\t" + glycoPSM.peptide.Sequence + "\t" + glycoPSM.glycans[0] + "\t" + fraction + 
-                                                 "\t" + glycoPSM.scanNumber + "\t" + glycoPSM.fragmentation + "\t" + glycoPSM.mzObs + "\t" + glycoPSM.charge + "\t" + 
-                                                 glycoPSM.obsMH + "\t" + glycanMass + "\t" + glycoPSM.score + "\t" + glycoPSM.deltaModScore + "\t" + glycoPSM.FDR2D + 
-                                                 "\t" + glycoPSM.PEP2D + "\t" + sequenceCoverage + "\t" + sequenceCoverageOnlyGlycoFragments + "\t" + glycanSequenceCoverage + 
-                                                 "\t" + oxoniumIons.Count + "\t");
-                    **/
-
+                    //outputEachFragment.WriteLine("ScanNumber\tPeptide\tSequence\tGlycan\tByonic Score\tDelta Mod Score\tLog Probability" +
+                                         //"\tProduct Ion\tFragment m/z\tFragment Charge\tFragment Intensity");
                     foreach (FragmentMatch fragment in peptideFragments)
-                    {
+                    {                       
                         fragmentList += fragment.fragmentName + ";";
                         fragmentIntensity += fragment.fragmentSignal;
-                        outputEachFragment.Write(fragment.fragmentName + "/" + fragment.fragmentNumber + "/" + fragment.fragmentMZ + "/" + fragment.fragmentCharge + 
-                                                    "/" + fragment.fragmentSignal + "\t");
 
-                        /**
-                        outputPeptideFragments.Write(fragment.fragmentName + "/" + fragment.fragmentNumber + "/" + fragment.fragmentMZ + "/" + fragment.fragmentCharge + 
-                                                    "/" + fragment.fragmentSignal + "\t");
-                         **/
+                        var test = glycoPSM.scanNumber + '\t' + glycoPSM.peptide.ToString() + '\t' + glycoPSM.peptide.Sequence;
+
+                        outputEachFragment.WriteLine(glycoPSM.scanNumber.ToString() + '\t' + glycoPSM.peptide.ToString() + '\t' + glycoPSM.peptide.Sequence + '\t' + glycoPSM.glycansToString() +
+                                    '\t' + glycoPSM.score + '\t' + glycoPSM.deltaModScore + '\t' + glycoPSM.logProb + '\t' + "Backbone" + '\t' + fragment.fragmentName + '\t' +
+                                    fragment.fragmentMZ + '\t' + fragment.fragmentCharge + '\t' + fragment.fragmentSignal);
                     }
 
                     double fragmentsNoNeutralLossIntensity = 0;
@@ -513,8 +488,9 @@ namespace ScanAssigner
                     {
                         glycanFragmentList += fragment.fragmentName + ";";
                         glycanFragmentIntensity += fragment.fragmentSignal;
-                        outputEachFragment.Write(fragment.fragmentName + "/" + fragment.fragmentNumber + "/" + fragment.fragmentMZ + 
-                                                "/" + fragment.fragmentCharge + "/" + fragment.fragmentSignal + "\t");
+                        outputEachFragment.WriteLine(glycoPSM.scanNumber.ToString() + '\t' + glycoPSM.peptide.ToString() + '\t' + glycoPSM.peptide.Sequence + '\t' + glycoPSM.glycansToString() +
+                                   '\t' + glycoPSM.score + '\t' + glycoPSM.deltaModScore + '\t' + glycoPSM.logProb + '\t' + "Backbone" + '\t' + fragment.fragmentName + '\t' +
+                                   fragment.fragmentMZ + '\t' + fragment.fragmentCharge + '\t' + fragment.fragmentSignal);
                         /**
                         outputGlycanFragments.Write(fragment.fragmentName + "/" + fragment.fragmentNumber + "/" + fragment.fragmentMZ + 
                                                 "/" + fragment.fragmentCharge + "/" + fragment.fragmentSignal + "\t");
@@ -527,8 +503,9 @@ namespace ScanAssigner
                     {
                         oxoniumIonsList += fragment.fragmentName + ";";
                         oxoniumIonIntensity += fragment.fragmentSignal;
-                        outputEachFragment.Write(fragment.fragmentName + "/" + fragment.fragmentNumber + "/" + fragment.fragmentMZ + 
-                                                   "/" + fragment.fragmentCharge + "/" + fragment.fragmentSignal + "\t");
+                        outputEachFragment.WriteLine(glycoPSM.scanNumber.ToString() + '\t' + glycoPSM.peptide.ToString() + '\t' + glycoPSM.peptide.Sequence + '\t' + glycoPSM.glycansToString() +
+                                   '\t' + glycoPSM.score + '\t' + glycoPSM.deltaModScore + '\t' + glycoPSM.logProb + '\t' + "Oxonium" + '\t' + fragment.fragmentName + '\t' +
+                                   fragment.fragmentMZ + '\t' + fragment.fragmentCharge + '\t' + fragment.fragmentSignal);
                         /**
                         outputOxoniumFragments.Write(fragment.fragmentName + "/" + fragment.fragmentNumber + "/" + fragment.fragmentMZ + 
                                                     "/" + fragment.fragmentCharge + "/" + fragment.fragmentSignal + "\t");
@@ -546,7 +523,6 @@ namespace ScanAssigner
                                              glycanFragmentIntensity + "\t" + oxoniumIonIntensity + "\t" + TIC + "\t" + fragmentList.Trim(';') + "\t" + 
                                              glycanFragmentList.Trim(';') + "\t" + oxoniumIonsList.Trim(';'));
 
-                    outputEachFragment.WriteLine();
                     //outputPeptideFragments.WriteLine();
                     //outputGlycanFragments.WriteLine();
                     //outputOxoniumFragments.WriteLine();

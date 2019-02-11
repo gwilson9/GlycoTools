@@ -57,6 +57,7 @@ namespace ScanAssigner
 
         public void crunch(string rawFilePath, string byonicResultsPath, string outputFolderPath)
         {
+
             List<PSM> allPsmsQuant = new List<PSM>();
             OnUpdateProgress(0.25);
 
@@ -142,8 +143,7 @@ namespace ScanAssigner
                         string glycansToBeParsed = csv["Glycans"];
                         double PEP2D = double.Parse(csv["PEP2D"]);
                         double PEP1D = double.Parse(csv["PEP1D"]);
-                        //double logProb = double.Parse(csv["|Log Prob|"]);
-                        double logProb = -1;
+                        double logProb = double.Parse(csv["|Log Prob|"]);
                         double score = double.Parse(csv["Score"]);
                         double deltaScore = double.Parse(csv["DeltaScore"]);
                         double deltaModScore = double.Parse(csv["Delta Mod.Score"]);
@@ -398,13 +398,18 @@ namespace ScanAssigner
 
             foreach (PSM psmQ in allPsmsQuant)
             {
-                quantWriter.WriteLine(psmQ.protRank + "\t" + psmQ.byonicSequence + "\t" + psmQ.peptidesToBeParsed + "\t" + psmQ.peptide.Sequence + "\t" +
+
+                //if(psmQ.logProb > 1 && psmQ.score > 150 && psmQ.deltaModScore > 10)
+                if(psmQ.score > 50)
+                {
+                    quantWriter.WriteLine(psmQ.protRank + "\t" + psmQ.byonicSequence + "\t" + psmQ.peptidesToBeParsed + "\t" + psmQ.peptide.Sequence + "\t" +
                     psmQ.peptideStartPosition + "\t" + psmQ.modsToBeParsed + "\t" + psmQ.glycansToBeParsed + "\t" + psmQ.PEP2D + "\t" + psmQ.PEP1D + "\t" + psmQ.logProb +
                     "\t" + psmQ.score + "\t" + psmQ.deltaScore + "\t" + psmQ.deltaModScore + "\t" + psmQ.charge + "\t" + psmQ.mzObs + "\t" + psmQ.mzCalc + "\t" + psmQ.ppmError +
                     "\t" + psmQ.obsMH + "\t" + psmQ.calcMH + "\t" + psmQ.cleavage + "\t" + psmQ.glycanPositions + "\t" + psmQ.proteinName + "\t" + psmQ.protID + "\t" + psmQ.scanTime +
                     "\t" + psmQ.scanNumber + "\t" + psmQ.modsFixed + "\t" + psmQ.FDR2D + "\t" + psmQ.FDR1D + "\t" + psmQ.FDR2Dunique + "\t" + psmQ.FDR1Dunique + "\t" +
                     psmQ.qvalue2D + "\t" + psmQ.qvalue1D + "\t" + psmQ.isGlycoPeptide + "\t" + psmQ.modsPassedCheck + "\t" + psmQ.positionPassedCheck + "\t" + psmQ.fragmentation
                     + "\t" + psmQ.masterScan + "\t" + psmQ.intensity);
+                }                
             }
 
             quantWriter.Close();
