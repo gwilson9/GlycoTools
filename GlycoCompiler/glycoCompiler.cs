@@ -74,7 +74,8 @@ namespace GlycoCompiler
                                 Double.Parse(reader["Delta Mod.Score"]) >= deltaModFilter &&
                                 reader["Peptide"].Length >= pepLengthFilter &&
                                 reader["Glycans"].Split(';').Count() <= modCountFilter &&
-                                Double.Parse(reader["FDR1D"]) <= 0.01
+                                Double.Parse(reader["FDR1D"]) <= 0.01 &&
+                                !reader["ProteinName"].Contains("Reverse")
                                 )
                         {
                             foreach (string header in headers)
@@ -153,7 +154,6 @@ namespace GlycoCompiler
             {
                 while (csv.ReadNextRecord())
                 {
-
                     List<string> headers = csv.GetFieldHeaders().ToList();
 
                     List<int> glycanPositionsList = new List<int>();
@@ -433,11 +433,11 @@ namespace GlycoCompiler
                         }
                         uniqueSequencesDictionary[peptide.Sequence].Add(psm);
 
-                        if (!glycoPeptideDictionary.ContainsKey(peptide.SequenceWithModifications))
+                        if (!glycoPeptideDictionary.ContainsKey(peptide.SequenceWithModifications + " " + uniprotID))
                         {
-                            glycoPeptideDictionary.Add(peptide.SequenceWithModifications, new List<GlycoPSM>());
+                            glycoPeptideDictionary.Add(peptide.SequenceWithModifications + " " + uniprotID, new List<GlycoPSM>());
                         }
-                        glycoPeptideDictionary[peptide.SequenceWithModifications].Add(psm);
+                        glycoPeptideDictionary[peptide.SequenceWithModifications + " " + uniprotID].Add(psm);
 
                         foreach (int site in glycanPositionsList)
                         {
@@ -466,8 +466,13 @@ namespace GlycoCompiler
                         if (!glycoProteinsDictionary.ContainsKey(uniprotID))
                         {
                             glycoProteinsDictionary.Add(uniprotID, new List<GlycoPSM>());
+                            glycoProteinsDictionary[uniprotID].Add(psm);
                         }
-                        glycoProteinsDictionary[uniprotID].Add(psm);
+                        else
+                        {
+                            glycoProteinsDictionary[uniprotID].Add(psm);
+                        }
+                        
                     }
 
                     if (peptide.Length > 4 && FDR2D <= 0.01 && isGlycoPeptide && score >= scoreFilter)
@@ -743,15 +748,24 @@ namespace GlycoCompiler
                     }
                     numberOfPSMs++;
                     uniqueSequences.Add(psm.peptide.Sequence);
+
                     foreach (string glycan in psm.glycans)
                     {
-                        glycansAtThisSite.Add(glycan);
                         if (glycans.Equals("NoGlycans"))
+                        {
                             glycans = glycan;
+                            glycansAtThisSite.Add(glycan);
+                        }
                         else
-                            if(!glycans.Contains(glycan))
+                        {
+                            if (!glycansAtThisSite.Contains(glycan))
+                            {
                                 glycans += ";" + glycan;
+                                glycansAtThisSite.Add(glycan);
+                            }
+                        }
                     }
+
                     if (psm.matchedToUniprot)
                         inUniprot = true;
                     evidence = psm.evidenceType;
@@ -987,6 +1001,10 @@ namespace GlycoCompiler
                         glycansSeenOnThisProteinLocalized += ";" + glycanLocalized;
                 }
 
+                if (description.Equals("blank"))
+                {
+                    int asdf = 0;
+                }
 
                 outputProteins.WriteLine(uniprotID + "\t" + description + "\t" + inUniprotAsGlycoProtein + "\t" + numberOfPSMsLocalized + "\t" + uniquePeptidesLocalized.Count + "\t" + uniqueSequencesLocalized.Count + "\t" + glycoSitesLocalized.Count + "\t" +
                     glycansLocalized.Count + "\t" + glycansSeenOnThisProteinLocalized + "\t" + numberOfPSMs + "\t" + uniquePeptides.Count + "\t" + uniqueSequences.Count + "\t" + glycoSites.Count + "\t" + glycans.Count + "\t" + glycansSeenOnThisProtein);
@@ -1045,7 +1063,7 @@ namespace GlycoCompiler
                 int numberOfPSMs = 0;
                 int numberOfPSMsLocalized = 0;
 
-                string sequenceToUse = entry.Key;
+                string sequenceToUse = entry.Key.Split(' ')[0];
 
                 List<string> mods = new List<string>();
 

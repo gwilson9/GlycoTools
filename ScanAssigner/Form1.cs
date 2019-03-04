@@ -88,16 +88,7 @@ namespace ScanAssigner
             prgProgress.Value = prgProgress.Minimum;
             scanAssigner.highlightListItems += HandleHighlightListItems;
             Task thread = new Task(scanAssigner.Start);
-            thread.Start();           
-
-
-            /**
-            var scanAssigner = new ScanAssigner(rawFilePath.Text, byonicResultsPath.Text, outputFolderPath.Text);
-            scanAssigner.UpdateProgress += HandleUpdateProgress;
-            prgProgress.Value = prgProgress.Minimum;                        
-            Task thread = new Task(scanAssigner.crunch);
-            thread.Start();
-            **/           
+            thread.Start();                     
         }
 
         private void HandleUpdateProgress(object sender, ProgressEventArgs e)

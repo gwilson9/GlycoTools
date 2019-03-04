@@ -17,11 +17,14 @@ namespace DeglycoDataBrowser
     {
         public List<string> files;
         public string database;
+        public string outputPath;
 
-        public deglycoDBGenerator(List<string> files, string databasePath)
+        public deglycoDBGenerator(List<string> files, string databasePath, string outputPath)
         {
             this.files = files;
             this.database = databasePath;
+            this.outputPath = outputPath;
+
         }
 
         public void Start()
@@ -30,19 +33,32 @@ namespace DeglycoDataBrowser
 
             foreach (string file in files)
             {
+                OnHighlightActiveFile(file);
+
+                OnUpdateProgress(0.5);
+
                 File parsedFile = new File(file, db, Path.GetFileNameWithoutExtension(file));
 
-                printData(parsedFile, file, db);
+                var resultsPath = outputPath + "\\" + Path.GetFileNameWithoutExtension(file) + "_parsedByGlycoTools.csv";
 
-                printFastaFile(Path.GetDirectoryName(file) + "\\" + Path.GetFileNameWithoutExtension(file) + "_LocalizedPSMs.fasta", 
-                    parsedFile.localizedDeglycoPSMsWithMotif, db);
+                printData(parsedFile, resultsPath, db);
+
+                OnUpdateProgress(0.75);
+
+                var fastaPath = outputPath + "\\" + Path.GetFileNameWithoutExtension(file) + "_LocalizedPSMs.fasta";
+
+                printFastaFile(fastaPath, parsedFile.localizedDeglycoPSMsWithMotif, db);
+
+                OnUpdateProgress(1.0);
+
+                OnUpdateProgress(0.0);
             }            
         }
 
         public static void printData(File file, string pathout, Dictionary<string, string> db)
         {           
 
-            StreamWriter writer = new StreamWriter(Path.GetDirectoryName(pathout) + "\\" + Path.GetFileNameWithoutExtension(pathout) + "_parsedByGlycoTools.csv");
+            StreamWriter writer = new StreamWriter(pathout);
 
             string firstLine = "Peptide,Protein,Mass,Charge,RawFile,Spectrum Number,Is Deamidated PSM,Mod Position Within Protein,Deglyco Mod Count,Sequon Amino Acid (S/T),Is Localized";
             writer.WriteLine(firstLine);
@@ -198,10 +214,6 @@ namespace DeglycoDataBrowser
 
         public static Dictionary<string, string> parseDB(string pathIn)
         {
-
-            
-
-
             Dictionary<string, string> returnDict = new Dictionary<string, string>();
 
             List<string> badsequences = new List<string>();
@@ -209,12 +221,6 @@ namespace DeglycoDataBrowser
             //StreamReader reader = new StreamReader(pathIn);
 
             var reader = new FastaReader(pathIn);
-
-            string uniprotID = "";
-
-            bool isDecoy = true;
-
-            string sequence = "";
 
             foreach (var fasta in reader.ReadNextFasta())
             {
@@ -224,54 +230,31 @@ namespace DeglycoDataBrowser
                     returnDict.Add(">" + desc, fasta.Sequence);
                 }                    
             }
-
-            /**
-            while (reader.Peek() >= 0)
-            {
-
-                string nextLine = reader.ReadLine();
-
-                if (nextLine.StartsWith(">"))
-                {
-
-                    if (nextLine.Contains("DECOY"))
-                    {
-                        isDecoy = true;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            if (!sequence.Equals(""))
-                            {
-                                returnDict.Add(uniprotID, sequence);
-                            }
-                            Regex rgx = new Regex(",");
-                            uniprotID = rgx.Replace(nextLine, ";");
-                            sequence = "";
-                            isDecoy = false;
-                        }
-                        catch (Exception e)
-                        {
-                            badsequences.Add(sequence);
-                            uniprotID = nextLine.Split('|')[1];
-                            sequence = "";
-                            isDecoy = false;
-                        }
-
-                    }
-                }
-                else
-                {
-                    if (!isDecoy)
-                    {
-                        sequence += nextLine;
-                    }
-                }
-            }
-    **/
-
             return returnDict;
         }
+
+        public event EventHandler<ProgressEventArgs> UpdateProgress;
+
+        protected virtual void OnUpdateProgress(double progress)
+        {
+            var handler = UpdateProgress;
+            if (handler != null)
+            {
+                handler(this, new ProgressEventArgs(progress));
+            }
+        }
+
+        public event EventHandler<HighlightEventArgs> HighlightActiveFile;
+
+        protected virtual void OnHighlightActiveFile(string file)
+        {
+            var handler = HighlightActiveFile;
+            if(handler != null)
+            {
+                handler(this, new HighlightEventArgs(file));
+            }
+
+        }
+
     }
 }

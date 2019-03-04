@@ -38,9 +38,11 @@ namespace ScanAssigner
             //ThermoRawFile rawFile = new ThermoRawFile(@rawfile);
             //rawFile.Open();
 
-            string fileName = Path.GetFileNameWithoutExtension(resultFile);          
+            string fileName = Path.GetFileNameWithoutExtension(resultFile);
 
-            StreamReader inputFile = new StreamReader(@resultFile);
+            var inputfile = Path.GetDirectoryName(resultFile) + '\\' + fileName + "_Quant.txt";
+
+            StreamReader inputFile = new StreamReader(@inputfile);
             StreamReader UniprotGlycoDBfile = new StreamReader(uniprotGlycoDBfile);
 
             StreamWriter outputSummary = new StreamWriter(outputPath + fileName + "_scoredSpectra.txt");

@@ -151,6 +151,7 @@
             this.Controls.Add(this.uniprotGlycoDBFile);
             this.Controls.Add(this.rawFilePathsBox);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Scan Assigner";
             this.Load += new System.EventHandler(this.Form1_Load);

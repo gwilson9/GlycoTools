@@ -68,16 +68,16 @@ namespace ScanAssigner
 
             StreamReader byonicFile = new StreamReader(byonicResultsPath);
             StreamWriter outputSummary = new StreamWriter(@outputFolderPath + "\\" + file + "_summary.csv");
-            StreamWriter outputList = new StreamWriter(@outputFolderPath + "\\" + file + "_list.txt");
+            //StreamWriter outputList = new StreamWriter(@outputFolderPath + "\\" + file + "_list.txt");
 
 
             //Write Headers
-            outputList.WriteLine("Prot.Rank\tSequence\tPeptideParseFriendly\tPeptide\tPos.\tMods(variable)\tGlycans\t"+
-                                 "PEP2D\tPEP1D\t|Log Prob|\tScore\tDeltaScore\tDelta Mod.Score\tCharge\tObs.m/z\t"+
-                                 "Precursor Theoretical m/z (Th)\tppmerr.\tObs.MH\tCalc.MH\tCleavage\tGlycansPos.\tProteinName" +
-                                 "\tProt.Id\tScanTime\tSpectrum Number\tMods(fixed)\tFDR2D\tFDR1D\t"+
-                                 "FDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D\tisGlycoPeptide\tmodsPassedCheck" +
-                                 "\tpositionPassedCheck\tfragmentation\tMasterScan");
+            //outputList.WriteLine("Prot.Rank\tSequence\tPeptideParseFriendly\tPeptide\tPos.\tMods(variable)\tGlycans\t"+
+            //                     "PEP2D\tPEP1D\t|Log Prob|\tScore\tDeltaScore\tDelta Mod.Score\tCharge\tObs.m/z\t"+
+            //                     "Precursor Theoretical m/z (Th)\tppmerr.\tObs.MH\tCalc.MH\tCleavage\tGlycansPos.\tProteinName" +
+            //                     "\tProt.Id\tScanTime\tSpectrum Number\tMods(fixed)\tFDR2D\tFDR1D\t"+
+            //                     "FDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D\tisGlycoPeptide\tmodsPassedCheck" +
+            //                     "\tpositionPassedCheck\tfragmentation\tMasterScan");
 
             List<int> HCDscans = new List<int>();
             List<int> ETDscans = new List<int>();
@@ -119,7 +119,8 @@ namespace ScanAssigner
                 }
             }
 
-            
+            //Added to accomodate PRM exps
+            bool isPRM = false;
 
             using (var csv = new CsvReader(byonicFile, true, '\t'))
             {
@@ -248,7 +249,17 @@ namespace ScanAssigner
                             positionsPassedCheck = true;
                         }
 
-                        int masterScan = rawFile.GetParentSpectrumNumber(scanNumber);
+
+                        int masterScan = 0;
+                        
+                        try
+                        {
+                            masterScan = rawFile.GetParentSpectrumNumber(scanNumber);
+                        }catch(Exception e)
+                        {
+                            // Included for PRM (MS2 has not master scan)   
+                            isPRM = true;                         
+                        }
 
                         PSM psm = new PSM(peptide, PID, protRank, peptidesToBeParsed, peptideStartPosition, modsToBeParsed, glycansToBeParsed, 
                                           PEP2D, PEP1D, logProb, score, deltaScore, deltaModScore, charge, mzObs, mzCalc, ppmError,
@@ -357,13 +368,13 @@ namespace ScanAssigner
                         outputList.WriteLine("FDR uniq.2D\tFDR uniq.1D\tq-value2D\tq-value1D\tisGlycoPeptide\tmodsPassedCheck\tpositionPassedCheck\tfragmentation\tPeak126\tPeak138\tPeak144\tPeak168\tPeak186\tPeak204\tPeak274\tPeak292\tPeak366");
                         */
 
-                        outputList.WriteLine(protRank + "\t" + byonicSequence + "\t" + peptidesToBeParsed + "\t" + aminoAcidSequence + "\t" +
-                                             peptideStartPosition + "\t" + modsToBeParsed + "\t" + glycansToBeParsed + "\t" + PEP2D + "\t" + PEP1D + "\t" +
-                                             logProb + "\t" + score + "\t" + deltaScore + "\t" + deltaModScore + "\t" + charge + "\t" + mzObs + "\t" + mzCalc +
-                                             "\t" + ppmError + "\t" + obsMH + "\t" + calcMH + "\t" + cleavage + "\t" + glycanPositions + "\t" + proteinName + "\t" +
-                                             protID + "\t" + scanTime + "\t" + scanNumber + "\t" + modsFixed + "\t" + FDR2D + "\t" + FDR1D + "\t" + FDR2Dunique +
-                                             "\t" + FDR1Dunique + "\t" + qvalue2D + "\t" + qvalue1D + "\t" + isGlycoPeptide + "\t" + modsPassedCheck + "\t" +
-                                             positionsPassedCheck + "\t" + fragmentation + "\t" + masterScan);
+                        //outputList.WriteLine(protRank + "\t" + byonicSequence + "\t" + peptidesToBeParsed + "\t" + aminoAcidSequence + "\t" +
+                        //                     peptideStartPosition + "\t" + modsToBeParsed + "\t" + glycansToBeParsed + "\t" + PEP2D + "\t" + PEP1D + "\t" +
+                        //                     logProb + "\t" + score + "\t" + deltaScore + "\t" + deltaModScore + "\t" + charge + "\t" + mzObs + "\t" + mzCalc +
+                        //                     "\t" + ppmError + "\t" + obsMH + "\t" + calcMH + "\t" + cleavage + "\t" + glycanPositions + "\t" + proteinName + "\t" +
+                        //                     protID + "\t" + scanTime + "\t" + scanNumber + "\t" + modsFixed + "\t" + FDR2D + "\t" + FDR1D + "\t" + FDR2Dunique +
+                        //                     "\t" + FDR1Dunique + "\t" + qvalue2D + "\t" + qvalue1D + "\t" + isGlycoPeptide + "\t" + modsPassedCheck + "\t" +
+                        //                     positionsPassedCheck + "\t" + fragmentation + "\t" + masterScan);
 
                     } catch(Exception e)
                     {
@@ -374,15 +385,23 @@ namespace ScanAssigner
 
             //24 7,Console.ReadKey();
             //For Nick's LFQ
-            try
+            if (!isPRM)
             {
-                LFQProcessor lfqs = new LFQProcessor(@rawFilePath);
-                allPsmsQuant = lfqs.crunch(allPSMs);
+                try
+                {
+                    LFQProcessor lfqs = new LFQProcessor(@rawFilePath);
+                    allPsmsQuant = lfqs.crunch(allPSMs);
+                }
+                catch (Exception e)
+                {
+                    System.Windows.Forms.MessageBox.Show(e.ToString());
+                }
             }
-            catch (Exception e)
+            else
             {
-                System.Windows.Forms.MessageBox.Show(e.ToString());
+                allPsmsQuant = allPSMs;
             }
+            
 
             // Start LFQ Writer
             StreamWriter quantWriter = new StreamWriter(@outputFolderPath + "\\" + file + "_list_Quant.txt");
@@ -491,7 +510,7 @@ namespace ScanAssigner
             outputSummary.WriteLine("PhosphoHex (243.0264),," + hcdWithPhosphoHexOxonium + "," + etdWithPhosphoHexOxonium);
 
             outputSummary.Close();
-            outputList.Close();
+            //outputList.Close();
 
             var glycoFragmentFinder = new glycoFragmentFinder(rawFile, "1", @outputFolderPath + "\\" + file + "_list.txt", uniprotGlycoDBFile, outputFolderPath);
             glycoFragmentFinder.crunch();

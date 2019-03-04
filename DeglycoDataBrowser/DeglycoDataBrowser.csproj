@@ -58,7 +58,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HighlightEventHandler.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProgressEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PsmComparer.cs" />
     <Compile Include="psms.cs" />

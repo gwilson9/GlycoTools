@@ -67,10 +67,55 @@ namespace DeglycoDataBrowser
         {
             List<string> peptideFile = peptideFiles.Items.OfType<string>().ToList();
             string db = uniprotDB.Text;
+            string outputPath = outputFolder.Text;
 
-            deglycoDBGenerator dbGen = new deglycoDBGenerator(peptideFile, db);
+            deglycoDBGenerator dbGen = new deglycoDBGenerator(peptideFile, db, outputPath);
+            dbGen.UpdateProgress += HandleUpdateProgress;
+            dbGen.HighlightActiveFile += HandleHighlightListItems;
             Task task = new Task(dbGen.Start);
-            task.Start();
+            task.Start(); 
+        }
+
+        private void peptideFiles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HandleUpdateProgress(object sender, ProgressEventArgs e)
+        {
+            ChangeProgressBarValue(e.Progress);
+        }
+
+        private void ChangeProgressBarValue(double progressValue)
+        {
+            if (InvokeRequired)
+            {
+                prgProgress.Invoke(new Action<double>(ChangeProgressBarValue), progressValue);
+                return;
+            }
+            prgProgress.Value = (int)(prgProgress.Maximum * progressValue);
+        }
+
+        private void HandleHighlightListItems(object sender, HighlightEventArgs e)
+        {
+            HighlightListItems(e.resultsFile);
+        }
+
+        private void HighlightListItems(string resultsFile)
+        {
+            if (InvokeRequired)
+            {
+                peptideFiles.Invoke(new Action<string>(HighlightListItems), resultsFile);
+                return;
+            }
+
+            for (int i = 0; i < peptideFiles.Items.Count; i++)
+            {
+                if (resultsFile.Equals(peptideFiles.Items[i]))
+                {
+                    peptideFiles.SetSelected(i, true);
+                }
+            }
         }
     }
 }
