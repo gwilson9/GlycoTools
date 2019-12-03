@@ -128,36 +128,3 @@ D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenera
 D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\obj\Debug\GlycoTools.csproj.GenerateResource.Cache
 D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\GlycoTools\bin\Debug\CSMSL.xml
 C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\GlycoTools.exe.config
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\obj\Debug\GlycoTools.exe
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\obj\Debug\GlycoTools.pdb
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\GlycoTools.exe
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\GlycoTools.pdb
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\ByonicDataParser.exe
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\CSMSL.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\CSMSL.Thermo.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\DeglycoDataBrowser.exe
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\EntityFramework.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\GlycoCompiler.exe
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\LumenWorks.Framework.IO.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\MathNet.Numerics.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\ScanAssigner.exe
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\System.Data.SQLite.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\ByonicDataParser.pdb
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\CSMSL.pdb
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\CSMSL.xml
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\CSMSL.Thermo.pdb
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\DeglycoDataBrowser.pdb
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\GlycoCompiler.pdb
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\ScanAssigner.pdb
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\EntityFramework.xml
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\LumenWorks.Framework.IO.xml
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\MathNet.Numerics.xml
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\bin\Debug\System.Data.SQLite.xml
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\obj\Debug\GlycoTools.csprojResolveAssemblyReference.cache
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\obj\Debug\GlycoTools.GlycoToolsForm.resources
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\obj\Debug\GlycoTools.Properties.Resources.resources
-C:\Users\gwilson\Desktop\Repo\GlycoTools\GlycoTools\obj\Debug\GlycoTools.csproj.GenerateResource.Cache

@@ -71,7 +71,6 @@ namespace GlycoCompiler
                         if (Double.Parse(reader["Delta Mod.Score"]) >= deltaModFilter &&
                                 Double.Parse(reader["Score"]) >= scoreFilter &&
                                 Double.Parse(reader["|Log Prob|"]) >= logProbFilter &&
-                                Double.Parse(reader["Delta Mod.Score"]) >= deltaModFilter &&
                                 reader["Peptide"].Length >= pepLengthFilter &&
                                 reader["Glycans"].Split(';').Count() <= modCountFilter &&
                                 Double.Parse(reader["FDR1D"]) <= 0.01 &&
@@ -80,10 +79,7 @@ namespace GlycoCompiler
                         {
                             foreach (string header in headers)
                             {
-
-
                                 nextLine += reader[header] + "\t";
-
                             }
                             writer.WriteLine(nextLine + Path.GetFileName(file));
                         }      

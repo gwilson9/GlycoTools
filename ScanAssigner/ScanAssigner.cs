@@ -144,7 +144,7 @@ namespace ScanAssigner
                         string glycansToBeParsed = csv["Glycans"];
                         double PEP2D = double.Parse(csv["PEP2D"]);
                         double PEP1D = double.Parse(csv["PEP1D"]);
-                        double logProb = double.Parse(csv["|Log Prob|"]);
+                        double logProb = 0; // double.Parse(csv["|Log Prob|"]);
                         double score = double.Parse(csv["Score"]);
                         double deltaScore = double.Parse(csv["DeltaScore"]);
                         double deltaModScore = double.Parse(csv["Delta Mod.Score"]);

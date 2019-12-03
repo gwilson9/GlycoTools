@@ -54,7 +54,7 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Location = new System.Drawing.Point(0, 101);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(582, 656);
+            this.panel1.Size = new System.Drawing.Size(574, 647);
             this.panel1.TabIndex = 3;
             // 
             // button3
@@ -141,7 +141,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(582, 102);
+            this.panel3.Size = new System.Drawing.Size(574, 102);
             this.panel3.TabIndex = 4;
             // 
             // panel2
@@ -152,7 +152,7 @@
             this.panel2.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.panel2.Location = new System.Drawing.Point(0, 97);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(585, 5);
+            this.panel2.Size = new System.Drawing.Size(577, 5);
             this.panel2.TabIndex = 6;
             // 
             // button5
@@ -161,7 +161,7 @@
             this.button5.BackgroundImage = global::GlycoTools.Properties.Resources._20181112_GlycoTools_Images_Artboard_1_copy_5;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(396, 18);
+            this.button5.Location = new System.Drawing.Point(388, 18);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(169, 84);
             this.button5.TabIndex = 7;
@@ -173,9 +173,9 @@
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 584);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 575);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(582, 148);
+            this.richTextBox1.Size = new System.Drawing.Size(574, 148);
             this.richTextBox1.TabIndex = 16;
             this.richTextBox1.Text = "";
             this.richTextBox1.Visible = false;
@@ -189,7 +189,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::GlycoTools.Properties.Resources._20181112_GlycoTools_Images_Artboard_1_copy_51;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(582, 726);
+            this.ClientSize = new System.Drawing.Size(574, 717);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);

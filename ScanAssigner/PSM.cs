@@ -78,7 +78,7 @@ namespace ScanAssigner
             this.glycansToBeParsed = glycansToBeParsed;
             this.PEP2D = PEP2D;
             this.PEP1D = PEP1D;
-            this.logProb = logProb;
+            this.logProb = 0-Math.Log(PEP1D);
             this.score = score;
             this.deltaScore = deltaScore;
             this.deltaModScore = deltaModScore;

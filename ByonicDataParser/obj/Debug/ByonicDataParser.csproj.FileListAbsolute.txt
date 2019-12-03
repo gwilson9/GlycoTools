@@ -83,25 +83,3 @@ D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenera
 D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\obj\Debug\ByonicDataParser.exe
 D:\Documents\Documents\visual studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\obj\Debug\ByonicDataParser.pdb
 D:\Documents\Documents\Visual Studio 2015\Projects\GlycoTools_WithLFQandDBgenerator\ByonicDataParser\bin\Debug\CSMSL.xml
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\ByonicDataParser.exe.config
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\ByonicDataParser.exe
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\ByonicDataParser.pdb
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.Thermo.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\EntityFramework.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\System.Data.SQLite.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.pdb
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.xml
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\CSMSL.Thermo.pdb
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\EntityFramework.xml
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\bin\Debug\System.Data.SQLite.xml
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.csprojResolveAssemblyReference.cache
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.Form1.resources
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.Properties.Resources.resources
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.csproj.GenerateResource.Cache
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.exe
-C:\Users\gwilson\Desktop\Repo\GlycoTools\ByonicDataParser\obj\Debug\ByonicDataParser.pdb
